@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 430" role="img" aria-labelledby="t d">
+<title id="t">Recepção de clínica</title><desc id="d">Ilustração vetorial aproximada da referência: planta, cadeiras, quadro e balcão.</desc>
+<defs><linearGradient id="blob" x2="1" y2="1"><stop stop-color="#D7F4FC"/><stop offset="1" stop-color="#BFEBFA"/></linearGradient><linearGradient id="glass" x2="1" y2="1"><stop stop-color="#B7E9FA"/><stop offset="1" stop-color="#EEF9FF"/></linearGradient><linearGradient id="desk" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#E9F7FC"/></linearGradient></defs>
+<path d="M48 188C81 133 113 137 143 96C176 48 229 76 268 51C315 20 333 2 391 8C440 13 463 49 489 109C508 154 535 198 524 263C515 323 476 379 408 398C322 422 229 414 174 398C105 378 33 354 22 292C12 248 19 219 48 188Z" fill="url(#blob)" opacity=".78"/>
+<g fill="none" stroke="#08265C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M17 358H544"/><path d="M256 93 536 18"/><path d="M284 106V225M349 107 500 68M349 107V225"/><path d="M383 113 533 91V224" stroke="#89C7E3"/>
+<path d="M176 130H246V215H176Z" fill="#F8FEFF"/><ellipse cx="201" cy="163" rx="14" ry="21" fill="#7CDDE0" stroke="none" opacity=".75"/><ellipse cx="219" cy="181" rx="14" ry="21" fill="#66C6E4" stroke="none" opacity=".75"/>
+<path d="M125 356v-76q0-12 12-12h31q12 0 12 12v76M191 356v-76q0-12 12-12h31q12 0 12 12v76" fill="#6FC7E5"/><path d="M129 315h62m-75 6h76m-69 0v35m64-35v35M193 315h61m-67 6h75m-68 0v35m61-35v35"/>
+<path d="M285 226h259v9H285Z" fill="#E9F7FC"/><path d="M291 235h241v122l-241-13Z" fill="url(#desk)"/><path d="M291 344 532 357v17l-241-17Z" fill="#77C9E7"/>
+<path d="M397 225v-30q0-4 5-4h44q5 0 5 4v30" fill="#224B73"/><path d="M420 225v-12h14v12" fill="#143A65"/><path d="M329 225v-8h17v8" fill="#009AA6"/><path d="M458 259v28m-14-14h28" stroke="#009AA6" stroke-width="11"/>
+<path d="M83 357h-35q-6-15-6-42h47q0 28-6 42Z" fill="#FFFFFF"/><path d="M66 315c-6-61-17-109-29-143m29 143c8-69 30-108 42-136M66 315c19-37 39-53 56-72m-56 72c-21-40-40-51-57-67" stroke="#007C8E" stroke-width="3"/>
+</g><g fill="#009AA6" stroke="#087989" stroke-width="1.5"><path d="M37 249C11 233 2 214 13 204c25 9 39 24 43 53Z"/><path d="M53 255c-15-27-16-50-6-70 17 16 23 38 15 73Z"/><path d="M72 245c8-34 25-55 42-62 6 24-6 47-42 73Z"/><path d="M78 279c13-29 31-43 53-44 1 26-18 45-56 54Z"/><path d="M54 289c-24-12-37-29-38-51 24 4 39 22 45 53Z"/></g>
+<path d="m319 171 20-31m-13 40 23-36" stroke="#FFFFFF" stroke-width="2" opacity=".7"/>
+</svg>
