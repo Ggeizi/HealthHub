@@ -1,0 +1,229 @@
+
+:root {
+  /* Página e colunas */
+  --pagina-largura-maxima: 1440px;
+  --pagina-altura-minima: 100vh;
+  --pagina-margem-lateral: clamp(24px, 4vw, 56px);
+  --pagina-margem-superior: clamp(18px, 4.4vh, 34px);
+  --pagina-margem-inferior: 16px;
+  --colunas-gap: clamp(24px, 3.5vw, 56px);
+
+  /* Área de login */
+  --login-largura: clamp(470px, 39vw, 530px);
+  --login-padding-horizontal: 28px;
+  --login-padding-vertical: 24px;
+  --login-raio: 18px;
+  --login-logo-espaco: 22px;
+  --login-intro-espaco: 8px;
+  --login-perfis-espaco: 20px;
+  --login-divisor-espaco: 20px;
+  --login-grupos-gap: 14px;
+  --login-acoes-espaco: 14px;
+  --login-aviso-espaco: 14px;
+
+  /* Seleção de perfil */
+  --perfil-colunas: 3;
+  --perfil-gap: 8px;
+  --perfil-altura: 76px;
+  --perfil-raio: 7px;
+  --perfil-espaco-interno: 4px;
+
+  /* Campos do formulário */
+  --campo-label-gap: 6px;
+  --campo-altura: 38px;
+  --campo-raio: 6px;
+  --campo-padding-horizontal: 12px;
+  --campo-conteudo-gap: 9px;
+
+  /* Ações e botão Entrar */
+  --acao-lembrar-altura: 24px;
+  --botao-altura: 42px;
+  --botao-raio: 6px;
+  --botao-espaco-superior: 14px;
+
+  /* Caixa de aviso */
+  --aviso-padding: 14px 16px;
+  --aviso-raio: 8px;
+  --aviso-gap: 12px;
+
+  /* Área de apresentação */
+  --apresentacao-largura-maxima: 620px;
+  --apresentacao-topo: 56px;
+  --apresentacao-titulo-largura: 390px;
+  --apresentacao-paragrafo-largura: 380px;
+  --apresentacao-intro-gap: 18px;
+
+  /* Lista de recursos */
+  --recursos-topo: 52px;
+  --recursos-gap: 26px;
+  --recurso-texto-gap: 3px;
+
+  /* Rodapé */
+  --rodape-altura: 54px;
+  --rodape-gap: 28px;
+}
+
+/* Configuração geral da página */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--fonte-interface);
+  color: var(--cor-texto-principal);
+  background: var(--cor-fundo);
+}
+
+.pagina {
+  display: flex;
+  flex-direction: column;
+
+  min-height: var(--pagina-altura-minima);
+
+  background:
+    var(--cor-fundo)
+    url("../assets/imagem/fundo.svg")
+    center top / cover
+    no-repeat;
+}
+
+/* Colunas principais */
+.principal {
+  display: grid;
+  grid-template-columns:
+    minmax(0, var(--login-largura))
+    minmax(0, 1fr);
+  align-items: start;
+  gap: var(--colunas-gap);
+
+  width: min(100%, var(--pagina-largura-maxima));
+  flex: 1;
+  margin: 0 auto;
+  padding:
+    var(--pagina-margem-superior)
+    var(--pagina-margem-lateral)
+    var(--pagina-margem-inferior);
+}
+
+/* Cartão de login */
+.login {
+  width: 100%;
+  padding:
+    var(--login-padding-vertical)
+    var(--login-padding-horizontal);
+
+  border-radius: var(--login-raio);
+  box-shadow: var(--sombra-card);
+  background: var(--cor-superficie);
+}
+
+/* Início do formulário */
+.login__cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--login-logo-espaco);
+}
+
+.login__cabecalho > div {
+  width: 100%;
+}
+
+.login__instrucao {
+  margin: 0 0 var(--login-intro-espaco);
+  text-align: center;
+}
+
+/* Área de seleção de perfil */
+.perfis {
+  display: grid;
+  grid-template-columns:
+    repeat(var(--perfil-colunas), minmax(0, 1fr));
+  gap: var(--perfil-gap);
+}
+
+/* Linha entre perfis e formulário */
+.login__divisor {
+  margin: var(--login-divisor-espaco) 0;
+  border: 0;
+  border-top: 1px solid var(--cor-borda);
+}
+
+/* Campos do formulário */
+.formulario {
+  display: grid;
+  gap: var(--login-grupos-gap);
+}
+
+.campo {
+  display: grid;
+  gap: var(--campo-label-gap);
+}
+
+/* Checkbox e link de senha */
+.acoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  min-height: var(--acao-lembrar-altura);
+  margin-top: var(--login-acoes-espaco);
+}
+
+/* Espaço da caixa de aviso */
+.aviso {
+  margin-top: var(--login-aviso-espaco);
+}
+
+/* Área de apresentação */
+.apresentacao {
+  position: relative;
+
+  width: 100%;
+  max-width: var(--apresentacao-largura-maxima);
+  padding-top: var(--apresentacao-topo);
+}
+
+.apresentacao__titulo {
+  max-width: var(--apresentacao-titulo-largura);
+  margin: 0;
+}
+
+.apresentacao__descricao {
+  max-width: var(--apresentacao-paragrafo-largura);
+  margin: var(--apresentacao-intro-gap) 0 0;
+}
+
+/* Lista de recursos */
+.recursos {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  gap: var(--recursos-gap);
+
+  max-width: 270px;
+  margin-top: var(--recursos-topo);
+}
+
+/* Rodapé */
+.rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--rodape-gap);
+
+  min-height: var(--rodape-altura);
+  padding: 8px var(--pagina-margem-lateral);
+
+  background: var(--cor-superficie);
+}
+
+.rodape__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--rodape-gap);
+}
