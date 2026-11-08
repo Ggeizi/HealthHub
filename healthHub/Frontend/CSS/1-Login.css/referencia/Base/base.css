@@ -1,0 +1,13 @@
+* { box-sizing: border-box; }
+
+body {
+  min-width: 320px;
+  max-height:0vh;
+  margin: 0;
+  color: var(--cor-texto-principal);
+  font-family: var(--fonte-interface);
+  background: var(--cor-fundo);
+}
+
+button, input { font: inherit; }
+img { max-width: 100%; }

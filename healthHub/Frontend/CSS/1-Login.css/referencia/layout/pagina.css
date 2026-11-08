@@ -1,0 +1,33 @@
+.pagina {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--cor-fundo) url("../assets/imagem/fundo.svg") center top / cover no-repeat;
+}
+
+.principal {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  align-items: start;
+  gap: 25px;
+  width: 100%;
+  flex: 1;
+  margin: 0 auto;
+  padding-left: 4rem;
+  padding-right: 1rem;
+}
+
+.login {
+  width: 100%;
+  padding: 24px 28px;
+  border-radius: 18px;
+  background: var(--cor-superficie);
+  box-shadow: 0 8px 28px rgba(8, 38, 92, .06);
+}
+
+.login__divisor {
+  margin: 40px 0;
+  border: 0;
+  border-top: 2px solid var(--cor-borda);
+}
+

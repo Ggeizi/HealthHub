@@ -1,0 +1,190 @@
+/* Formulário */
+.formulario {
+  display: grid;
+  gap: 22px;
+}
+
+.campo__controle {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo__label {
+  font-size: 14px;
+  font-weight: var(--peso-semi);
+  line-height: 20px;
+}
+
+.campo__entrada {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  background: var(--cor-superficie);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.campo__entrada:focus-within {
+  border-color: var(--cor-foco);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.12);
+}
+
+.campo__icone,
+.campo_icone {
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex: none;
+  object-fit: contain;
+}
+
+.campo__input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  flex: 1;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--cor-texto-principal);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.campo__input::placeholder {
+  color: var(--cor-placeholder);
+}
+
+/* Ações e checkbox */
+.acoes {
+  display: flex;
+  min-height: 24px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: -18px;
+}
+
+.acoes label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--cor-azul-acao);
+  cursor: pointer;
+}
+
+.Link,
+.acoes a {
+  color: var(--cor-azul-acao);
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.Link:hover,
+.acoes a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Botões */
+.login__botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.botao-entrar,
+.botao-cadastrar {
+  display: flex;
+  width: 100%;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--cor-botao-inicio),
+    var(--cor-botao-fim)
+  );
+  color: var(--cor-superficie);
+  font-size: 20px;
+  font-weight: var(--peso-semi);
+  line-height: 24px;
+  cursor: pointer;
+  transition: filter 150ms ease;
+}
+
+.botao-entrar:hover,
+.botao-cadastrar:hover {
+  filter: brightness(1.06);
+}
+
+.botao-entrar:focus-visible,
+.botao-cadastrar:focus-visible {
+  outline: 2px solid var(--cor-foco);
+  outline-offset: 2px;
+}
+
+.botao-entrar img,
+.botao-cadastrar img {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  object-fit: contain;
+}
+
+/* Aviso */
+.aviso {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: var(--cor-info);
+  color: var(--cor-texto-secundario);
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.aviso > img {
+  width: 21px;
+  height: 21px;
+  flex: none;
+  object-fit: contain;
+}
+
+.aviso > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.aviso p {
+  margin: 0;
+}
+
+.aviso p + p {
+  margin-top: 6px;
+}
+
+.aviso strong {
+  color: var(--cor-texto-principal);
+  font-weight: var(--peso-semi);
+}

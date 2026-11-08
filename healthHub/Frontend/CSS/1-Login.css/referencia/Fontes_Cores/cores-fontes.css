@@ -1,5 +1,5 @@
-
 :root {
+  /* Cores */
   --cor-texto-principal: #08265C;
   --cor-texto-secundario: #435B80;
   --cor-marca: #009AA6;
@@ -16,9 +16,11 @@
   --cor-info: #E4F1FF;
   --cor-circulo-recurso: #CEF4F5;
   --cor-foco: #007BFF;
-  --gradiente-botao: linear-gradient(90deg, var(--cor-botao-inicio), var(--cor-botao-fim));
-  --gradiente-titulo: linear-gradient(90deg, #009AA6 0%, #32DDEF 65%, #009AA6 100%);
-  --sombra-card: 0 8px 28px rgba(8, 38, 92, .06);
-  --sombra-pagina: 0 2px 14px rgba(8, 38, 92, .07);
-  --sombra-campo-foco: 0 0 0 3px rgba(0, 123, 255, .12);
+
+  /* Fontes e pesos */
+  --fonte-interface: Inter, Arial, Helvetica, sans-serif;
+  --peso-regular: 400;
+  --peso-medio: 500;
+  --peso-semi: 600;
+  --peso-titulo: 700;
 }
