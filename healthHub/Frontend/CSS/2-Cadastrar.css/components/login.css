@@ -1,0 +1,19 @@
+
+
+#selecao_perfis {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+#recepcao{
+    width: 8rem;
+    height: auto;
+}
+
+#perfil-usuario{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}

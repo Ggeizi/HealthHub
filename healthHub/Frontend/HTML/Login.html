@@ -14,6 +14,9 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="../CSS/1-Login.css/referencia/main.css">
+
+    <script src="../JAVASCRIPT/paginas/1-Login/Login.js" defer></script>
+
 </head>
 
 <body class="pagina">
@@ -43,7 +46,7 @@
 
                     <div class="selecao_perfis">
 
-                        <div class="perfil">
+                        <div onclick="selecionar(event)" class="perfil" id="recepcao">
                             <img
                                 src="../CSS/1-Login.css/assets/icones/recepcao.svg"
                                 alt=""
@@ -51,7 +54,7 @@
                             <p>Recepção</p>
                         </div>
 
-                        <div class="perfil">
+                        <div  onclick="selecionar(event)" class="perfil" id="medico">
                             <img
                                 src="../CSS/1-Login.css/assets/icones/medico.svg"
                                 alt=""
@@ -59,7 +62,7 @@
                             <p>Médico</p>
                         </div>
 
-                        <div class="perfil">
+                        <div onclick="selecionar(event)" class="perfil" id="paciente">
                             <img
                                 src="../CSS/1-Login.css/assets/icones/paciente.svg"
                                 alt=""
@@ -76,13 +79,13 @@
             <hr class="login__divisor">
 
             <!-- FORMULÁRIO -->
-            <form class="formulario">
+            <form class="formulario" id="formulario">
 
-                <!-- E-mail -->
+                <!-- CPF -->
                 <div class="campo__controle">
 
-                    <label class="campo__label" for="email">
-                        E-mail
+                    <label class="campo__label" for="cpf">
+                        CPF
                     </label>
 
                     <div class="campo__entrada">
@@ -95,10 +98,10 @@
 
                         <input
                             class="campo__input"
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="seu@email.com"
+                            type="text"
+                            id="cpf"
+                            name="cpf"
+                            placeholder="000.000.000-00"
                             required
                         >
 
@@ -164,7 +167,7 @@
                         >
                     </button>
 
-                    <button type="button" class="botao-cadastrar">
+                    <button onclick="window.location.href=`./Cadastro.html`" type="button" class="botao-cadastrar">
                         Cadastrar
                         <img
                             src="../CSS/1-Login.css/assets/icones/seta-entrar.svg"

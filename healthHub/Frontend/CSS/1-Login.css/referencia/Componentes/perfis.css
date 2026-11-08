@@ -24,12 +24,18 @@
   transition: border-color 150ms ease, background-color 150ms ease;
 }
 
+
+
 .perfil img {
   display: block;
   width: 30px;
   height: 30px;
   object-fit: contain;
   pointer-events: none;
+}
+
+.perfil.selecionado {
+    background-color: #abeae6;
 }
 
 .perfil p {
