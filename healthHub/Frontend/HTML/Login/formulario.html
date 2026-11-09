@@ -1,0 +1,99 @@
+<form class="formulario" id="formulario">
+
+                <!-- CPF -->
+                <div class="campo__controle">
+
+                    <label class="campo__label" for="cpf">
+                        CPF
+                    </label>
+
+                    <div class="campo__entrada">
+
+                        <img
+                            src="../../CSS/1-Login.css/assets/icones/email.svg"
+                            alt=""
+                            class="campo__icone"
+                        >
+
+                        <input
+                            class="campo__input"
+                            type="text"
+                            id="cpf"
+                            name="cpf"
+                            placeholder="000.000.000-00"
+                            required
+                        >
+
+                    </div>
+                </div>
+
+                <!-- Senha -->
+                <div class="campo__controle">
+
+                    <label class="campo__label" for="password">
+                        Senha
+                    </label>
+
+                    <div class="campo__entrada">
+
+                        <img
+                            src="../../CSS/1-Login.css/assets/icones/senha.svg"
+                            alt=""
+                            class="campo__icone"
+                        >
+
+                        <input
+                            class="campo__input"
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Sua senha"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <img
+                            src="../../CSS/1-Login.css/assets/icones/ocultar-senha.svg"
+                            alt=""
+                            class="campo_icone"
+                        >
+
+                    </div>
+                </div>
+
+                <!-- Ações -->
+                <div class="acoes login__opcoes">
+
+                    <label>
+                        <input class="checkbox"type="checkbox" name="lembrar">
+                        Lembrar de mim
+                    </label>
+
+                    <a href="#">
+                        Esqueci minha senha
+                    </a>
+
+                </div>
+
+                <!-- Botões -->
+                <div class="login__botoes">
+
+                    <button type="submit" class="botao-entrar">
+                        Entrar
+                        <img
+                            src="../../CSS/1-Login.css/assets/icones/seta-entrar.svg"
+                            alt=""
+                        >
+                    </button>
+
+                    <button onclick="window.location.href=`../Cadastro/index.html`" type="button" class="botao-cadastrar">
+                        Cadastrar
+                        <img
+                            src="../../CSS/1-Login.css/assets/icones/seta-entrar.svg"
+                            alt=""
+                        >
+                    </button>
+
+                </div>
+
+            </form>
