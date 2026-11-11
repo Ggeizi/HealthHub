@@ -1,22 +1,193 @@
-<div class="aviso">
+<form
+    class="formulario"
+    id="formulario-cadastro-hospital"
+>
 
-                <img
-                    src="../../CSS/1-Login.css/assets/icones/informacao.svg"
-                    alt=""
-                >
+    <h2 class="formulario__titulo">
+        Cadastrar hospital
+    </h2>
 
-                <div>
-                    <p>
-                        <strong>
-                            Cada perfil possui um painel exclusivo.
-                        </strong>
-                    </p>
+    <p class="formulario__descricao">
+        Preencha os dados do hospital e crie o acesso da recepção.
+    </p>
 
-                    <p>
-                        Após o login, você terá acesso a um painel
-                        personalizado com todas as funcionalidades
-                        disponíveis.
-                    </p>
-                </div>
+    <div class="campo__controle">
 
-            </div>
+        <label
+            class="campo__label"
+            for="nomeHospital"
+        >
+            Nome do hospital
+        </label>
+
+        <div class="campo__entrada">
+
+            <input
+                class="campo__input"
+                type="text"
+                id="nomeHospital"
+                name="nomeHospital"
+                placeholder="Digite o nome do hospital"
+                maxlength="160"
+                required
+            >
+
+        </div>
+
+    </div>
+
+    <div class="campo__controle">
+
+        <label
+            class="campo__label"
+            for="cnpj"
+        >
+            CNPJ
+        </label>
+
+        <div class="campo__entrada">
+
+            <input
+                class="campo__input"
+                type="text"
+                id="cnpj"
+                name="cnpj"
+                placeholder="00.000.000/0000-00"
+                maxlength="18"
+                required
+            >
+
+        </div>
+
+    </div>
+
+    <div class="campo__controle">
+
+        <label
+            class="campo__label"
+            for="endereco"
+        >
+            Endereço
+        </label>
+
+        <div class="campo__entrada">
+
+            <input
+                class="campo__input"
+                type="text"
+                id="endereco"
+                name="endereco"
+                placeholder="Rua, número, cidade e estado"
+                maxlength="255"
+                required
+            >
+
+        </div>
+
+    </div>
+
+    <hr class="formulario__divisor">
+
+    <h3 class="formulario__subtitulo">
+        Acesso da recepção
+    </h3>
+
+    <div class="campo__controle">
+
+        <label
+            class="campo__label"
+            for="nomeRecepcionista"
+        >
+            Nome do recepcionista
+        </label>
+
+        <div class="campo__entrada">
+
+            <input
+                class="campo__input"
+                type="text"
+                id="nomeRecepcionista"
+                name="nomeRecepcionista"
+                placeholder="Digite o nome completo"
+                maxlength="160"
+                required
+            >
+
+        </div>
+
+    </div>
+
+    <div class="campo__controle">
+
+        <label
+            class="campo__label"
+            for="loginRecepcao"
+        >
+            Login da recepção
+        </label>
+
+        <div class="campo__entrada">
+
+            <input
+                class="campo__input"
+                type="email"
+                id="loginRecepcao"
+                name="loginRecepcao"
+                placeholder="recepcao@hospital.com"
+                autocomplete="username"
+                required
+            >
+
+        </div>
+
+    </div>
+
+    <div class="campo__controle">
+
+        <label
+            class="campo__label"
+            for="senhaRecepcao"
+        >
+            Senha inicial
+        </label>
+
+        <div class="campo__entrada">
+
+            <input
+                class="campo__input"
+                type="password"
+                id="senhaRecepcao"
+                name="senhaRecepcao"
+                placeholder="Crie uma senha"
+                minlength="8"
+                autocomplete="new-password"
+                required
+            >
+
+        </div>
+
+    </div>
+
+    <div class="login__botoes">
+
+        <button
+            type="submit"
+            class="botao-entrar"
+        >
+            Cadastrar hospital
+
+            <img
+                src="../../CSS/1-Login.css/assets/icones/seta-entrar.svg"
+                alt=""
+            >
+        </button>
+
+    </div>
+
+    <p
+        id="mensagem-cadastro"
+        class="mensagem"
+        role="alert"
+    ></p>
+
+</form>
