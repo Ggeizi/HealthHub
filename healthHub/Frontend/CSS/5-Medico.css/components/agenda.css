@@ -1,0 +1,102 @@
+#agenda-medica {
+    border-left: 4px solid #087887;
+}
+
+.medico__secao-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e1eaee;
+}
+
+.medico__etiqueta {
+    margin: 0 0 6px;
+    color: #087887;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.medico__secao h1 {
+    margin: 0;
+    color: #183145;
+    font-size: 1.35rem;
+}
+
+.medico__descricao {
+    margin: 8px 0 0;
+    color: #647985;
+}
+
+.botao-secundario {
+    padding: 9px 14px;
+    color: #155d6b;
+    background-color: #e4f2f2;
+    border: 1px solid #9bc9ca;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.tabela__container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabela {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+}
+
+.tabela th,
+.tabela td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e2eaee;
+}
+
+.tabela th {
+    color: #607380;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+}
+
+.tabela td {
+    color: #315868;
+    font-size: 0.92rem;
+}
+
+.botao-prontuario {
+    padding: 7px 10px;
+    color: #ffffff;
+    background-color: #087887;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.botao-prontuario:hover {
+    background-color: #056170;
+}
+
+.tabela__status {
+    display: inline-block;
+    padding: 4px 9px;
+    color: #145d67;
+    background-color: #e4f2f2;
+    border-radius: 99px;
+    font-size: 0.8rem;
+}
+
+.tabela__status--cancelado {
+    color: #9b3442;
+    background-color: #f8e9eb;
+}
+
+.tabela__status--concluido {
+    color: #287346;
+    background-color: #e5f4e9;
+}
