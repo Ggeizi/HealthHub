@@ -1,15 +1,7 @@
 
 <!--indentificando o arquivo como um projeto Maven-->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-
+<project xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
-
-    <!-- Identificação do projeto -->
-    <groupId>com.healthhub</groupId>
-    <artifactId>healthhub</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
 
     <!-- Gerenciamento das versões predefinidas pelo Spring Boot -->
     <parent>
@@ -18,6 +10,11 @@
         <version>3.5.7</version>
         <relativePath/>
     </parent>
+
+    <!-- Identificação do projeto -->
+    <groupId>com.healthhub</groupId>
+    <artifactId>healthhub</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
     <!--versão do java usada para compilar o projeto-->
     <properties>
@@ -35,7 +32,13 @@
         <!-- Spring Data JPA, Hibernate e Jakarta Persistence -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Security para autenticação e autorização -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
         <!-- Driver JDBC para comunicação com MySQL -->
@@ -45,16 +48,27 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Spring Boot Security para autenticação e autorização -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-
     </dependencies>
 
     <!-- Configuração da construção do projeto -->
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>../Frontend/HTML</directory>
+                <targetPath>static</targetPath>
+            </resource>
+            <resource>
+                <directory>../Frontend/CSS</directory>
+                <targetPath>static/CSS</targetPath>
+            </resource>
+            <resource>
+                <directory>../Frontend/JAVASCRIPT</directory>
+                <targetPath>static/JAVASCRIPT</targetPath>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -62,5 +76,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
