@@ -1,0 +1,113 @@
+<section
+    class="medico__secao"
+    id="prontuario"
+>
+
+    <div class="medico__secao-cabecalho">
+
+        <div>
+            <p class="medico__etiqueta">
+                Atendimento
+            </p>
+
+            <h1>
+                Prontuário do paciente
+            </h1>
+
+            <p
+                id="paciente-selecionado"
+                class="medico__descricao"
+            >
+                Selecione um atendimento na agenda.
+            </p>
+        </div>
+
+    </div>
+
+    <form
+        class="medico__formulario"
+        id="formulario-prontuario"
+    >
+
+        <input
+            type="hidden"
+            id="agendamentoId"
+            name="agendamentoId"
+        >
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="relato"
+            >
+                Relato / sintomas
+            </label>
+
+            <textarea
+                class="campo__input"
+                id="relato"
+                name="relato"
+                rows="5"
+                placeholder="Descreva o relato do paciente"
+                required
+            ></textarea>
+
+        </div>
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="diagnostico"
+            >
+                Diagnóstico
+            </label>
+
+            <textarea
+                class="campo__input"
+                id="diagnostico"
+                name="diagnostico"
+                rows="5"
+                placeholder="Informe o diagnóstico"
+                required
+            ></textarea>
+
+        </div>
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="conduta"
+            >
+                Conduta e orientações
+            </label>
+
+            <textarea
+                class="campo__input"
+                id="conduta"
+                name="conduta"
+                rows="5"
+                placeholder="Informe a conduta indicada"
+                required
+            ></textarea>
+
+        </div>
+
+        <button
+            type="submit"
+            class="botao-principal"
+        >
+            Salvar prontuário
+        </button>
+
+        <p
+            id="mensagem-prontuario"
+            class="mensagem"
+            role="alert"
+        ></p>
+
+    </form>
+
+</section>

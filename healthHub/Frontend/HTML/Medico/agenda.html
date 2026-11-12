@@ -1,0 +1,66 @@
+<section
+    class="medico__secao"
+    id="agenda-medica"
+>
+
+    <div class="medico__secao-cabecalho">
+
+        <div>
+            <p class="medico__etiqueta">
+                Consultas
+            </p>
+
+            <h1>
+                Minha agenda
+            </h1>
+
+            <p class="medico__descricao">
+                Consulte os pacientes agendados para você.
+            </p>
+        </div>
+
+        <button
+            type="button"
+            class="botao-secundario"
+            id="atualizar-agenda-medica"
+        >
+            Atualizar
+        </button>
+
+    </div>
+
+    <div class="tabela__container">
+
+        <table class="tabela">
+
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Paciente</th>
+                    <th>Status</th>
+                    <th>Observação</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabela-agenda-medica">
+
+                <tr>
+                    <td colspan="5">
+                        Carregando agenda...
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <p
+        id="mensagem-agenda-medica"
+        class="mensagem"
+        role="alert"
+    ></p>
+
+</section>

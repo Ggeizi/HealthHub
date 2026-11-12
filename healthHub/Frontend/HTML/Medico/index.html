@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Área médica | HealthHub</title>
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="../../CSS/1-Login.css/assets/logo/simbolo.svg"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../CSS/5-Medico.css/components/main.css"
+    >
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.11/dist/htmx.min.js"
+        defer
+    ></script>
+</head>
+
+<body class="pagina">
+
+    <div
+        hx-get="cabecalho.html"
+        hx-trigger="load"
+        hx-swap="outerHTML"
+    ></div>
+
+    <main class="medico__principal">
+
+        <div
+            hx-get="menu.html"
+            hx-trigger="load"
+            hx-swap="outerHTML"
+        ></div>
+
+        <section class="medico__conteudo">
+
+            <div
+                hx-get="agenda.html"
+                hx-trigger="load"
+                hx-swap="outerHTML"
+            ></div>
+
+            <div
+                hx-get="prontuario.html"
+                hx-trigger="load"
+                hx-swap="outerHTML"
+            ></div>
+
+        </section>
+
+    </main>
+
+    <div
+        hx-get="rodape.html"
+        hx-trigger="load"
+        hx-swap="outerHTML"
+    ></div>
+
+    <script src="../../JAVASCRIPT/5-Medico/medico.js"></script>
+    <script src="../../JAVASCRIPT/5-Medico/agenda.js"></script>
+    <script src="../../JAVASCRIPT/5-Medico/prontuario.js"></script>
+</body>
+
+</html>
