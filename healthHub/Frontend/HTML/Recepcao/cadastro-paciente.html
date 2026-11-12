@@ -1,0 +1,157 @@
+<section
+    class="recepcao__secao"
+    id="cadastro-paciente"
+>
+
+    <div class="recepcao__secao-cabecalho">
+
+        <div>
+            <p class="recepcao__etiqueta">
+                Cadastro
+            </p>
+
+            <h1>
+                Cadastrar paciente
+            </h1>
+        </div>
+
+    </div>
+
+    <form
+        class="formulario recepcao__formulario"
+        id="formulario-paciente"
+    >
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="nomePaciente"
+            >
+                Nome completo
+            </label>
+
+            <input
+                class="campo__input"
+                type="text"
+                id="nomePaciente"
+                name="nome"
+                required
+            >
+
+        </div>
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="loginPaciente"
+            >
+                Login
+            </label>
+
+            <input
+                class="campo__input"
+                type="email"
+                id="loginPaciente"
+                name="login"
+                placeholder="paciente@email.com"
+                required
+            >
+
+        </div>
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="cpfPaciente"
+            >
+                CPF
+            </label>
+
+            <input
+                class="campo__input"
+                type="text"
+                id="cpfPaciente"
+                name="cpf"
+                placeholder="000.000.000-00"
+                required
+            >
+
+        </div>
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="nascimentoPaciente"
+            >
+                Data de nascimento
+            </label>
+
+            <input
+                class="campo__input"
+                type="date"
+                id="nascimentoPaciente"
+                name="nascimento"
+                required
+            >
+
+        </div>
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="telefonePaciente"
+            >
+                Telefone
+            </label>
+
+            <input
+                class="campo__input"
+                type="tel"
+                id="telefonePaciente"
+                name="telefone"
+                required
+            >
+
+        </div>
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="senhaPaciente"
+            >
+                Senha inicial
+            </label>
+
+            <input
+                class="campo__input"
+                type="password"
+                id="senhaPaciente"
+                name="senha"
+                minlength="8"
+                required
+            >
+
+        </div>
+
+        <button
+            class="botao-principal"
+            type="submit"
+        >
+            Cadastrar paciente
+        </button>
+
+        <p
+            id="mensagem-paciente"
+            class="mensagem"
+            role="alert"
+        ></p>
+
+    </form>
+
+</section>

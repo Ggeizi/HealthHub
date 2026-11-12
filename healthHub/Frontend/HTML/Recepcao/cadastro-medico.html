@@ -1,0 +1,137 @@
+<section
+    class="recepcao__secao"
+    id="cadastro-medico"
+>
+
+    <div class="recepcao__secao-cabecalho">
+
+        <div>
+            <p class="recepcao__etiqueta">
+                Cadastro
+            </p>
+
+            <h1>
+                Cadastrar médico
+            </h1>
+        </div>
+
+    </div>
+
+    <form
+        class="formulario recepcao__formulario"
+        id="formulario-medico"
+    >
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="nomeMedico"
+            >
+                Nome completo
+            </label>
+
+            <input
+                class="campo__input"
+                type="text"
+                id="nomeMedico"
+                name="nome"
+                required
+            >
+
+        </div>
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="loginMedico"
+            >
+                Login
+            </label>
+
+            <input
+                class="campo__input"
+                type="email"
+                id="loginMedico"
+                name="login"
+                placeholder="medico@hospital.com"
+                required
+            >
+
+        </div>
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="crmMedico"
+            >
+                CRM
+            </label>
+
+            <input
+                class="campo__input"
+                type="text"
+                id="crmMedico"
+                name="crm"
+                required
+            >
+
+        </div>
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="especialidadeMedico"
+            >
+                Especialidade
+            </label>
+
+            <input
+                class="campo__input"
+                type="text"
+                id="especialidadeMedico"
+                name="especialidade"
+                required
+            >
+
+        </div>
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="senhaMedico"
+            >
+                Senha inicial
+            </label>
+
+            <input
+                class="campo__input"
+                type="password"
+                id="senhaMedico"
+                name="senha"
+                minlength="8"
+                required
+            >
+
+        </div>
+
+        <button
+            class="botao-principal"
+            type="submit"
+        >
+            Cadastrar médico
+        </button>
+
+        <p
+            id="mensagem-medico"
+            class="mensagem"
+            role="alert"
+        ></p>
+
+    </form>
+
+</section>

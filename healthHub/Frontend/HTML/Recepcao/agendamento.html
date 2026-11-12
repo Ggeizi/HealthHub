@@ -1,0 +1,121 @@
+<section
+    class="recepcao__secao"
+    id="novo-agendamento"
+>
+
+    <div class="recepcao__secao-cabecalho">
+
+        <div>
+            <p class="recepcao__etiqueta">
+                Agenda
+            </p>
+
+            <h1>
+                Novo agendamento
+            </h1>
+        </div>
+
+    </div>
+
+    <form
+        class="formulario recepcao__formulario"
+        id="formulario-agendamento"
+    >
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="medicoAgendamento"
+            >
+                Médico
+            </label>
+
+            <select
+                class="campo__input"
+                id="medicoAgendamento"
+                name="medicoId"
+                required
+            >
+                <option value="">
+                    Selecione o médico
+                </option>
+            </select>
+
+        </div>
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="pacienteAgendamento"
+            >
+                Paciente
+            </label>
+
+            <select
+                class="campo__input"
+                id="pacienteAgendamento"
+                name="pacienteId"
+                required
+            >
+                <option value="">
+                    Selecione o paciente
+                </option>
+            </select>
+
+        </div>
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="inicioAgendamento"
+            >
+                Data e hora
+            </label>
+
+            <input
+                class="campo__input"
+                type="datetime-local"
+                id="inicioAgendamento"
+                name="inicio"
+                required
+            >
+
+        </div>
+
+        <div class="campo__controle">
+
+            <label
+                class="campo__label"
+                for="observacaoAgendamento"
+            >
+                Observação
+            </label>
+
+            <textarea
+                class="campo__input"
+                id="observacaoAgendamento"
+                name="observacao"
+                rows="3"
+            ></textarea>
+
+        </div>
+
+        <button
+            class="botao-principal"
+            type="submit"
+        >
+            Agendar consulta
+        </button>
+
+        <p
+            id="mensagem-agendamento"
+            class="mensagem"
+            role="alert"
+        ></p>
+
+    </form>
+
+</section>
