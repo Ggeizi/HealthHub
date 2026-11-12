@@ -1,0 +1,118 @@
+/*
+    Estilos do formulário de cadastro do hospital
+*/
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.formulario__titulo {
+    margin: 0 0 4px;
+    color: #183145;
+    font-size: 1.35rem;
+}
+
+.formulario__descricao {
+    margin: 0 0 18px;
+    color: #647985;
+    font-size: 0.92rem;
+}
+
+.formulario__subtitulo {
+    margin: 4px 0 12px;
+    color: #155d6b;
+    font-size: 1rem;
+}
+
+.formulario__divisor {
+    width: 100%;
+    margin: 18px 0;
+    border: 0;
+    border-top: 1px solid #e1eaee;
+}
+
+.campo__controle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.campo__label {
+    color: #254959;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.campo__entrada {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.campo__input {
+    width: 100%;
+    padding: 11px 12px;
+    color: #183145;
+    background-color: #ffffff;
+    border: 1px solid #b8cbd3;
+    border-radius: 8px;
+    outline: none;
+}
+
+.campo__input::placeholder {
+    color: #8b9da5;
+}
+
+.campo__input:focus {
+    border-color: #37a99d;
+    box-shadow: 0 0 0 2px rgba(55, 169, 157, 0.16);
+}
+
+.login__botoes {
+    display: flex;
+    margin-top: 10px;
+}
+
+.botao-entrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 16px;
+    color: #ffffff;
+    background-color: #087887;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.botao-entrar:hover {
+    background-color: #056170;
+}
+
+.botao-entrar:focus {
+    outline: 3px solid rgba(55, 169, 157, 0.35);
+    outline-offset: 2px;
+}
+
+.botao-entrar img {
+    width: 17px;
+    height: 17px;
+}
+
+.mensagem {
+    min-height: 22px;
+    margin: 10px 0 0;
+    color: #a32532;
+    font-size: 0.9rem;
+}
+
+.mensagem.sucesso {
+    color: #126a54;
+}

@@ -1,0 +1,52 @@
+/*
+    Organização geral da página de cadastro
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #f4f8fb;
+    color: #183145;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.principal {
+    display: grid;
+    grid-template-columns: minmax(360px, 500px) 1fr;
+    align-items: center;
+    gap: 70px;
+    width: min(1150px, 100%);
+    min-height: calc(100vh - 100px);
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+.login {
+    width: 100%;
+    padding: 32px;
+    background-color: #ffffff;
+    border: 1px solid #dce6eb;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(23, 77, 102, 0.08);
+}
+
+.login__divisor {
+    margin: 24px 0;
+    border: 0;
+    border-top: 1px solid #e1eaee;
+}
+

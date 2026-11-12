@@ -1,0 +1,68 @@
+/*
+    Estilos do cabeçalho da página administrativa
+*/
+
+.login__cabecalho {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.logo-principal {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-principal img {
+    width: 210px;
+    max-width: 100%;
+    height: auto;
+}
+
+.perfis-usuario {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.login__instrucao {
+    margin: 0;
+    color: #536b78;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.selecao_perfis {
+    display: flex;
+    justify-content: center;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 230px;
+    padding: 12px 18px;
+    color: #155d6b;
+    background-color: #e4f2f2;
+    border: 1px solid #9bc9ca;
+    border-radius: 8px;
+}
+
+.perfil img {
+    width: 26px;
+    height: 26px;
+}
+
+.perfil p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.perfil.selecionado {
+    color: #ffffff;
+    background-color: #087887;
+    border-color: #087887;
+}

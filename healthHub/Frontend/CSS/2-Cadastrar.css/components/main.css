@@ -1,0 +1,23 @@
+/*
+    Arquivo principal da página de cadastro
+    Administrador - HealthHub
+*/
+
+
+/* Cabeçalho */
+@import url("cabecalho.css");
+
+/* Formulário */
+@import url("formulario.css");
+
+/* Aviso */
+@import url("aviso.css");
+
+/* Apresentação */
+@import url("apresentacao.css");
+
+/* Rodapé */
+@import url("rodape.css");
+
+/* Organização geral da página */
+@import url("Index.css");

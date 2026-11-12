@@ -1,0 +1,45 @@
+/*
+    Estilos do rodapé
+*/
+
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 24px;
+    color: #6d8089;
+    background-color: #ffffff;
+    border-top: 1px solid #dce6eb;
+}
+
+.rodape__logo {
+    width: 115px;
+    height: auto;
+}
+
+.rodape__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.rodape__links .Link {
+    color: #51717e;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.rodape__links .Link:hover {
+    color: #087887;
+    text-decoration: underline;
+}
+
+.rodape__copyright {
+    margin: 0;
+    font-size: 0.82rem;
+}
