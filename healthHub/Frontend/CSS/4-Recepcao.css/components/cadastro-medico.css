@@ -1,0 +1,33 @@
+#cadastro-medico {
+    border-left: 4px solid #087887;
+}
+
+#cadastro-medico .recepcao__secao-cabecalho {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e1eaee;
+}
+
+#cadastro-medico .recepcao__formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 18px;
+}
+
+#cadastro-medico .botao-principal {
+    grid-column: 1 / -1;
+    justify-self: start;
+}
+
+#cadastro-medico .mensagem {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 650px) {
+    #cadastro-medico .recepcao__formulario {
+        grid-template-columns: 1fr;
+    }
+
+    #cadastro-medico .botao-principal {
+        width: 100%;
+    }
+}

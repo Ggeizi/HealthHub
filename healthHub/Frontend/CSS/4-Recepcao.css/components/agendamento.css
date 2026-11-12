@@ -1,0 +1,38 @@
+#novo-agendamento {
+    border-left: 4px solid #0a6175;
+}
+
+#novo-agendamento .recepcao__secao-cabecalho {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e1eaee;
+}
+
+#novo-agendamento .recepcao__formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 18px;
+}
+
+#novo-agendamento textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+#novo-agendamento .botao-principal {
+    grid-column: 1 / -1;
+    justify-self: start;
+}
+
+#novo-agendamento .mensagem {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 650px) {
+    #novo-agendamento .recepcao__formulario {
+        grid-template-columns: 1fr;
+    }
+
+    #novo-agendamento .botao-principal {
+        width: 100%;
+    }
+}

@@ -1,0 +1,64 @@
+#agenda {
+    border-left: 4px solid #5c70a8;
+}
+
+#agenda .recepcao__secao-cabecalho {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e1eaee;
+}
+
+.tabela__container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabela {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+}
+
+.tabela th,
+.tabela td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e2eaee;
+}
+
+.tabela th {
+    color: #607380;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+}
+
+.tabela td {
+    color: #315868;
+    font-size: 0.92rem;
+}
+
+.tabela__status {
+    display: inline-block;
+    padding: 4px 9px;
+    color: #145d67;
+    background-color: #e4f2f2;
+    border-radius: 99px;
+    font-size: 0.8rem;
+}
+
+.tabela__status--cancelado {
+    color: #9b3442;
+    background-color: #f8e9eb;
+}
+
+.tabela__status--concluido {
+    color: #287346;
+    background-color: #e5f4e9;
+}
+
+@media (max-width: 650px) {
+    #agenda .recepcao__secao-cabecalho {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+}

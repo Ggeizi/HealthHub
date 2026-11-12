@@ -1,0 +1,46 @@
+.campo__controle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo__label {
+    color: #254959;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.campo__input {
+    width: 100%;
+    padding: 10px 12px;
+    color: #183145;
+    background-color: #ffffff;
+    border: 1px solid #b8cbd3;
+    border-radius: 8px;
+    outline: none;
+}
+
+.campo__input:focus {
+    border-color: #37a99d;
+    box-shadow: 0 0 0 2px rgba(55, 169, 157, 0.16);
+}
+
+.botao-principal {
+    padding: 10px 16px;
+    color: #ffffff;
+    background-color: #087887;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.botao-principal:hover {
+    background-color: #056170;
+}
+
+.mensagem {
+    min-height: 20px;
+    margin: 0;
+    font-size: 0.9rem;
+}

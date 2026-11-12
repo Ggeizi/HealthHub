@@ -1,0 +1,21 @@
+.recepcao__rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    padding: 18px 24px;
+    color: #6d8089;
+    background-color: #ffffff;
+    border-top: 1px solid #dce6eb;
+}
+
+.recepcao__rodape img {
+    width: 110px;
+    height: auto;
+}
+
+.recepcao__rodape p {
+    margin: 0;
+    font-size: 0.85rem;
+}

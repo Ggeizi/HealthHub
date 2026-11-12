@@ -1,0 +1,25 @@
+#cadastro-paciente {
+    border-left: 4px solid #26a594;
+}
+
+#cadastro-paciente .recepcao__secao-cabecalho {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e1eaee;
+}
+
+#cadastro-paciente .recepcao__formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 18px;
+}
+
+#cadastro-paciente .botao-principal {
+    grid-column: 1 / -1;
+    justify-self: start;
+}
+
+#cadastro-paciente .mensagem {
+    grid-column: 1 / -1;
+}
+
+

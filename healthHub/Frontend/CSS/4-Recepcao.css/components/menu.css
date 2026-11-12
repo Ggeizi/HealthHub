@@ -1,0 +1,33 @@
+.recepcao__menu {
+    padding: 28px 16px;
+    background-color: #ffffff;
+    border-right: 1px solid #dce6eb;
+}
+
+.recepcao__menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.recepcao__menu-titulo {
+    margin: 0 12px 12px;
+    color: #82939b;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.recepcao__menu-link {
+    padding: 11px 12px;
+    color: #536b78;
+    border-radius: 8px;
+    font-size: 0.92rem;
+}
+
+.recepcao__menu-link:hover {
+    color: #087887;
+    background-color: #e4f2f2;
+}
+

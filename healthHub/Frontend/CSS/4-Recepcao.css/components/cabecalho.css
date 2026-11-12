@@ -1,0 +1,49 @@
+.recepcao__cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 32px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dce6eb;
+}
+
+.recepcao__logo img {
+    width: 150px;
+    height: auto;
+}
+
+.recepcao__usuario {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.recepcao__usuario div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.recepcao__usuario strong {
+    color: #183145;
+}
+
+.recepcao__usuario span {
+    color: #6d8089;
+    font-size: 0.85rem;
+}
+
+.botao-sair {
+    padding: 8px 14px;
+    color: #155d6b;
+    background-color: #e4f2f2;
+    border: 1px solid #9bc9ca;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.botao-sair:hover {
+    background-color: #d4ebeb;
+}
+
