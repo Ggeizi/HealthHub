@@ -1,0 +1,93 @@
+<section class="admin__resumo">
+
+  <div class="admin__titulo-area">
+
+    <div>
+      <p class="admin__etiqueta">
+        Visão geral
+      </p>
+
+      <h1 class="admin__titulo">
+        Painel administrativo
+      </h1>
+
+      <p class="admin__descricao">
+        Gerencie os hospitais cadastrados no HealthHub.
+      </p>
+    </div>
+
+    <a href="../Cadastro/index.html" class="botao-principal">
+      Cadastrar hospital
+    </a>
+
+  </div>
+
+  <div class="admin__cards">
+
+    <article class="admin__card">
+
+      <span class="admin__card-label">
+        Hospitais cadastrados
+      </span>
+
+      <strong id="quantidade-hospitais" class="admin__card-valor">
+        0
+      </strong>
+
+    </article>
+
+    <article class="admin__card">
+
+      <span class="admin__card-label">
+        Sistema
+      </span>
+
+      <strong class="admin__card-valor">
+        Ativo
+      </strong>
+
+    </article>
+
+  </div>
+
+  <section class="admin__tabela-area">
+
+    <div class="admin__tabela-cabecalho">
+
+      <h2>
+        Hospitais cadastrados
+      </h2>
+
+      <span id="mensagem-hospitais"></span>
+
+    </div>
+
+    <div class="tabela__container">
+
+      <table class="tabela">
+
+        <thead>
+          <tr>
+            <th>Hospital</th>
+            <th>CNPJ</th>
+            <th>Endereço</th>
+            <th>Recepção</th>
+            <th>Login</th>
+          </tr>
+        </thead>
+
+        <tbody id="tabela-hospitais">
+          <tr>
+            <td colspan="5">
+              Carregando hospitais...
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </section>
+
+</section>

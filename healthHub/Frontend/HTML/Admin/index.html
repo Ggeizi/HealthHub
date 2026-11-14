@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Painel administrativo | HealthHub</title>
+
+  <link rel="icon" type="image/svg+xml" href="../../CSS/1-Login.css/assets/logo/simbolo.svg">
+
+  <link rel="stylesheet" href="../../CSS/3-Admin.css/components/main.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.11/dist/htmx.min.js" defer></script>
+</head>
+
+<body class="pagina">
+
+  <div hx-get="cabecalho.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+  <main class="admin__principal">
+
+    <div hx-get="menu.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+    <section class="admin__conteudo">
+
+      <div hx-get="resumo.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+    </section>
+
+  </main>
+
+  <div hx-get="rodape.html" hx-trigger="load" hx-swap="outerHTML"></div>
+
+  <script src="../../JAVASCRIPT/3-Admin/Admin.js"></script>
+
+</body>
+
+</html>
