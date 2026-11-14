@@ -1,0 +1,36 @@
+.admin__menu {
+  padding: 28px 16px;
+  background-color: #ffffff;
+  border-right: 1px solid #dce6eb;
+}
+
+.admin__menu-titulo {
+  margin: 0 12px 14px;
+  color: #82939b;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.admin__menu-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding: 11px 12px;
+  color: #536b78;
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+.admin__menu-link img {
+  width: 20px;
+  height: 20px;
+}
+
+.admin__menu-link:hover,
+.admin__menu-link--ativo {
+  color: #087887;
+  background-color: #e4f2f2;
+}

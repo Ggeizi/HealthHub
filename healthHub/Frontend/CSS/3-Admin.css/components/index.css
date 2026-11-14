@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: #183145;
+  background-color: #f4f8fb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a,
+button {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.pagina {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.admin__principal {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  flex: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.admin__conteudo {
+  padding: 36px;
+}
+
+@media (max-width: 800px) {
+  .admin__principal {
+    display: block;
+  }
+
+  .admin__conteudo {
+    padding: 24px 16px;
+  }
+}
