@@ -1,0 +1,51 @@
+.paciente__menu {
+  padding: 28px 16px;
+  background-color: #ffffff;
+  border-right: 1px solid #dce6eb;
+}
+
+.paciente__menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.paciente__menu-titulo {
+  margin: 0 12px 12px;
+  color: #82939b;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paciente__menu-link {
+  padding: 11px 12px;
+  color: #536b78;
+  border-radius: 8px;
+}
+
+.paciente__menu-link:hover {
+  color: #087887;
+  background-color: #e4f2f2;
+}
+
+@media (max-width: 850px) {
+  .paciente__menu {
+    padding: 12px 16px;
+    border-right: 0;
+    border-bottom: 1px solid #dce6eb;
+  }
+
+  .paciente__menu nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .paciente__menu-titulo {
+    display: none;
+  }
+
+  .paciente__menu-link {
+    flex: 0 0 auto;
+  }
+}

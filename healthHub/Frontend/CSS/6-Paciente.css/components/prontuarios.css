@@ -1,0 +1,137 @@
+#meus-prontuarios {
+  border-left: 4px solid #087887;
+}
+
+.paciente__secao-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e1eaee;
+}
+
+.paciente__etiqueta {
+  margin: 0 0 6px;
+  color: #087887;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paciente__secao h1 {
+  margin: 0;
+  color: #183145;
+  font-size: 1.5rem;
+}
+
+.paciente__descricao {
+  margin: 8px 0 0;
+  color: #647985;
+}
+
+.botao-secundario {
+  padding: 9px 14px;
+  color: #155d6b;
+  background-color: #e4f2f2;
+  border: 1px solid #9bc9ca;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.botao-secundario:hover {
+  background-color: #d4ebeb;
+}
+
+.paciente__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.paciente__prontuario {
+  padding: 20px;
+  background-color: #fbfefe;
+  border: 1px solid #dce6eb;
+  border-radius: 10px;
+}
+
+.paciente__prontuario-cabecalho {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.paciente__prontuario h2 {
+  margin: 0 0 6px;
+  color: #155d6b;
+  font-size: 1.1rem;
+}
+
+.paciente__prontuario-data {
+  margin: 0;
+  color: #6d8089;
+  font-size: 0.88rem;
+}
+
+.paciente__campo {
+  margin: 14px 0;
+}
+
+.paciente__campo strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #254959;
+}
+
+.paciente__campo p {
+  margin: 0;
+  color: #536b78;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.botao-pdf {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 13px;
+  color: #ffffff;
+  background-color: #087887;
+  border-radius: 7px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao-pdf:hover {
+  background-color: #056170;
+}
+
+.paciente__carregando,
+.paciente__vazio {
+  margin: 0;
+  color: #6d8089;
+}
+
+.mensagem {
+  min-height: 20px;
+  margin-top: 18px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 650px) {
+  .paciente__secao-cabecalho,
+  .paciente__prontuario-cabecalho {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .botao-secundario,
+  .botao-pdf {
+    width: 100%;
+  }
+}

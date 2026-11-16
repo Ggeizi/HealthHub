@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: #183145;
+  background-color: #f4f8fb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a,
+button {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.pagina {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.paciente__principal {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  flex: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.paciente__conteudo {
+  padding: 34px;
+}
+
+.paciente__secao {
+  padding: 26px;
+  background-color: #ffffff;
+  border: 1px solid #dce6eb;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(23, 77, 102, 0.05);
+}
+
+@media (max-width: 850px) {
+  .paciente__principal {
+    display: block;
+  }
+
+  .paciente__conteudo {
+    padding: 22px 16px;
+  }
+}
