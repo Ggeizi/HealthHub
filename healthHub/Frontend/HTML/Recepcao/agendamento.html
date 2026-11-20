@@ -1,120 +1,41 @@
-<section
-    class="recepcao__secao"
-    id="novo-agendamento"
->
+<section class="novo-agendamento">
 
-    <div class="recepcao__secao-cabecalho">
+    <header>
+        <h2>Novo agendamento</h2>
+        <p>Escolha o profissional, o paciente e o horário da consulta.</p>
+    </header>
+
+    <form id="form-agendamento">
+
+        <div class="campos-agendamento">
+
+            <div>
+                <label for="medico">Médico:</label>
+                <select id="medico" name="medico" required>
+                    <option value="" disabled selected>Selecione o médico</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="paciente">Paciente:</label>
+                <select id="paciente" name="paciente" required>
+                    <option value="" disabled selected>Selecione o paciente</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="data-hora">Data e hora:</label>
+                <input type="datetime-local" id="data-hora" name="dataHora" required>
+            </div>
+
+        </div>
 
         <div>
-            <p class="recepcao__etiqueta">
-                Agenda
-            </p>
-
-            <h1>
-                Novo agendamento
-            </h1>
+            <label for="observacao">Observação (opcional):</label>
+            <input type="text" id="observacao" name="observacao" placeholder="Adicione informações para o atendimento">
         </div>
 
-    </div>
-
-    <form
-        class="formulario recepcao__formulario"
-        id="formulario-agendamento"
-    >
-
-        <div class="campo__controle">
-
-            <label
-                class="campo__label"
-                for="medicoAgendamento"
-            >
-                Médico
-            </label>
-
-            <select
-                class="campo__input"
-                id="medicoAgendamento"
-                name="medicoId"
-                required
-            >
-                <option value="">
-                    Selecione o médico
-                </option>
-            </select>
-
-        </div>
-
-        <div class="campo__controle">
-
-            <label
-                class="campo__label"
-                for="pacienteAgendamento"
-            >
-                Paciente
-            </label>
-
-            <select
-                class="campo__input"
-                id="pacienteAgendamento"
-                name="pacienteId"
-                required
-            >
-                <option value="">
-                    Selecione o paciente
-                </option>
-            </select>
-
-        </div>
-
-        <div class="campo__controle">
-
-            <label
-                class="campo__label"
-                for="inicioAgendamento"
-            >
-                Data e hora
-            </label>
-
-            <input
-                class="campo__input"
-                type="datetime-local"
-                id="inicioAgendamento"
-                name="inicio"
-                required
-            >
-
-        </div>
-
-        <div class="campo__controle">
-
-            <label
-                class="campo__label"
-                for="observacaoAgendamento"
-            >
-                Observação
-            </label>
-
-            <textarea
-                class="campo__input"
-                id="observacaoAgendamento"
-                name="observacao"
-                rows="3"
-            ></textarea>
-
-        </div>
-
-        <button
-            class="botao-principal"
-            type="submit"
-        >
-            Agendar consulta
-        </button>
-
-        <p
-            id="mensagem-agendamento"
-            class="mensagem"
-            role="alert"
-        ></p>
+        <button class="botao" type="submit">Agendar consulta</button>
 
     </form>
 

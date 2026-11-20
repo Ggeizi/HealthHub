@@ -1,38 +1,84 @@
-#novo-agendamento {
-    border-left: 4px solid #0a6175;
+.novo-agendamento {
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
 }
 
-#novo-agendamento .recepcao__secao-cabecalho {
-    padding-bottom: 16px;
-    border-bottom: 1px solid #e1eaee;
+.novo-agendamento header {
+  margin-bottom: 20px;
 }
 
-#novo-agendamento .recepcao__formulario {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px 18px;
+.novo-agendamento h2 {
+  margin: 0 0 8px;
+  color: #08265c;
+  font-size: 24px;
+  font-weight: 700;
 }
 
-#novo-agendamento textarea {
-    min-height: 90px;
-    resize: vertical;
+.novo-agendamento form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-#novo-agendamento .botao-principal {
-    grid-column: 1 / -1;
-    justify-self: start;
+.campos-agendamento {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
-#novo-agendamento .mensagem {
-    grid-column: 1 / -1;
+.novo-agendamento form div {
+  min-width: 0;
 }
 
-@media (max-width: 650px) {
-    #novo-agendamento .recepcao__formulario {
-        grid-template-columns: 1fr;
-    }
+.novo-agendamento label {
+  color: #08265c;
+  font-size: 14px;
+  font-weight: 600;
+}
 
-    #novo-agendamento .botao-principal {
-        width: 100%;
-    }
+.novo-agendamento input,
+.novo-agendamento select {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border: 1px solid #dce4ef;
+  border-radius: 8px;
+
+  color: #08265c;
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.botao {
+  grid-column: 1 / -1;
+  justify-self: start;
+
+  width: 15%;
+  padding: 15px;
+
+  background: #009aa6;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 12px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.botao:hover {
+  background-color: rgba(0, 255, 255, 0.407);
 }

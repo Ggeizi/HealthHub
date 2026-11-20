@@ -1,156 +1,40 @@
-<section
-    class="recepcao__secao"
-    id="cadastro-paciente"
->
+<section class="cadastro-paciente">
 
-    <div class="recepcao__secao-cabecalho">
+    <header>
+        <h1>CADASTRAR PACIENTE</h1>
+        <p>Cadastre um novo paciente no sistema.</p>
+    </header>
+
+    <form id="form-paciente">
 
         <div>
-            <p class="recepcao__etiqueta">
-                Cadastro
-            </p>
-
-            <h1>
-                Cadastrar paciente
-            </h1>
+            <label for="paciente-nome">Nome completo:</label>
+            <input type="text" id="paciente-nome" name="nome" placeholder="Digite o nome completo" autocomplete="name" maxlength="160" required>
         </div>
 
-    </div>
-
-    <form
-        class="formulario recepcao__formulario"
-        id="formulario-paciente"
-    >
-
-        <div class="campo__controle">
-
-            <label
-                class="campo__label"
-                for="nomePaciente"
-            >
-                Nome completo
-            </label>
-
-            <input
-                class="campo__input"
-                type="text"
-                id="nomePaciente"
-                name="nome"
-                required
-            >
-
+        <div>
+            <label for="paciente-email">Email:</label>
+            <input type="email" id="paciente-email" name="email" placeholder="exemplo@email.com" autocomplete="email" required>
         </div>
 
-        <div class="campo__controle">
-
-            <label
-                class="campo__label"
-                for="loginPaciente"
-            >
-                Login
-            </label>
-
-            <input
-                class="campo__input"
-                type="email"
-                id="loginPaciente"
-                name="login"
-                placeholder="paciente@email.com"
-                required
-            >
-
+        <div>
+            <label for="paciente-cpf">CPF:</label>
+            <input type="text" id="paciente-cpf" name="cpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="14" autocomplete="off" required>
         </div>
 
-        <div class="campo__controle">
-
-            <label
-                class="campo__label"
-                for="cpfPaciente"
-            >
-                CPF
-            </label>
-
-            <input
-                class="campo__input"
-                type="text"
-                id="cpfPaciente"
-                name="cpf"
-                placeholder="000.000.000-00"
-                required
-            >
-
+        <div>
+            <label for="paciente-nascimento">Nascimento:</label>
+            <input type="date" id="paciente-nascimento" name="nascimento" autocomplete="bday" required>
         </div>
 
-        <div class="campo__controle">
-
-            <label
-                class="campo__label"
-                for="nascimentoPaciente"
-            >
-                Data de nascimento
-            </label>
-
-            <input
-                class="campo__input"
-                type="date"
-                id="nascimentoPaciente"
-                name="nascimento"
-                required
-            >
-
+        <div>
+            <label for="paciente-telefone">Telefone:</label>
+            <input type="tel" id="paciente-telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel" maxlength="15" required>
         </div>
 
-        <div class="campo__controle">
-
-            <label
-                class="campo__label"
-                for="telefonePaciente"
-            >
-                Telefone
-            </label>
-
-            <input
-                class="campo__input"
-                type="tel"
-                id="telefonePaciente"
-                name="telefone"
-                required
-            >
-
-        </div>
-
-        <div class="campo__controle">
-
-            <label
-                class="campo__label"
-                for="senhaPaciente"
-            >
-                Senha inicial
-            </label>
-
-            <input
-                class="campo__input"
-                type="password"
-                id="senhaPaciente"
-                name="senha"
-                minlength="8"
-                required
-            >
-
-        </div>
-
-        <button
-            class="botao-principal"
-            type="submit"
-        >
+        <button type="submit">
             Cadastrar paciente
         </button>
-
-        <p
-            id="mensagem-paciente"
-            class="mensagem"
-            role="alert"
-        ></p>
 
     </form>
 

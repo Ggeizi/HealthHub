@@ -1,0 +1,118 @@
+/* Cabeçalho principal */
+
+.header-principal {
+  width: 100%;
+  height: 72px;
+  padding: 0 28px;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #dce8f0;
+  box-shadow: 0 2px 12px rgba(8, 38, 92, 0.04);
+
+  font-family: "Inter", sans-serif;
+}
+
+/* Logo principal */
+
+.header-principal .header-logo {
+  width: 150px;
+  height: auto;
+  max-height: 48px;
+
+  object-fit: contain;
+  justify-self: start;
+}
+
+/* Título central */
+
+.header-principal h1 {
+  margin: 0;
+
+  color: #435b80;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Área do usuário */
+
+.header-usuario {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 12px;
+}
+
+/* Foto do usuário */
+
+.header-usuario .usuario-foto {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #dce8f0;
+}
+
+/* Nome do usuário */
+
+.header-usuario p {
+  margin: 0;
+
+  color: #08265c;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Separador */
+
+.header-usuario span {
+  color: #a5b7cc;
+  font-size: 16px;
+}
+
+/* Botão sair */
+
+.header-usuario button {
+  padding: 9px 16px;
+
+  background: #effaff;
+  border: 1px solid #d5edf0;
+  border-radius: 8px;
+
+  color: #008b98;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+/* Hover do botão */
+
+.header-usuario button:hover {
+  background: #009aa6;
+  color: #ffffff;
+  border-color: #009aa6;
+}
+
+/* Acessibilidade */
+
+.header-usuario button:focus-visible {
+  outline: 2px solid #009aa6;
+  outline-offset: 3px;
+}

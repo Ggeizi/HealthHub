@@ -1,64 +1,128 @@
-#agenda {
-    border-left: 4px solid #5c70a8;
+/* Container principal */
+
+.agenda-hospital {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-#agenda .recepcao__secao-cabecalho {
-    padding-bottom: 16px;
-    border-bottom: 1px solid #e1eaee;
+/* Cabeçalho */
+
+.agenda-hospital header {
+  margin-bottom: 28px;
 }
 
-.tabela__container {
-    width: 100%;
-    overflow-x: auto;
+.agenda-hospital h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #08265c;
+  margin: 0 0 16px;
 }
 
-.tabela {
-    width: 100%;
-    min-width: 650px;
-    border-collapse: collapse;
+.agenda-hospital header p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
 }
 
-.tabela th,
-.tabela td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #e2eaee;
+/* Container da tabela */
+
+.agenda-hospital .tabela-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #dce4ef;
+  border-radius: 10px;
 }
 
-.tabela th {
-    color: #607380;
-    font-size: 0.78rem;
-    text-transform: uppercase;
+/* Tabela */
+
+.agenda-hospital table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 16px;
 }
 
-.tabela td {
-    color: #315868;
-    font-size: 0.92rem;
+/* Cabeçalho da tabela */
+
+.agenda-hospital thead {
+  background: #effaff;
 }
 
-.tabela__status {
-    display: inline-block;
-    padding: 4px 9px;
-    color: #145d67;
-    background-color: #e4f2f2;
-    border-radius: 99px;
-    font-size: 0.8rem;
+.agenda-hospital th {
+  padding: 18px 20px;
+  color: #08265c;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  border-bottom: 1px solid #dce4ef;
 }
 
-.tabela__status--cancelado {
-    color: #9b3442;
-    background-color: #f8e9eb;
+/* Células */
+
+.agenda-hospital td {
+  padding: 18px 20px;
+  color: #435b80;
+  border-bottom: 1px solid #dce4ef;
+  vertical-align: middle;
 }
 
-.tabela__status--concluido {
-    color: #287346;
-    background-color: #e5f4e9;
+.agenda-hospital tbody tr:last-child td {
+  border-bottom: none;
 }
 
-@media (max-width: 650px) {
-    #agenda .recepcao__secao-cabecalho {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
-    }
+/* Efeito hover */
+
+.agenda-hospital tbody tr:hover {
+  background: #f5fcff;
+}
+
+/* Status */
+
+.agenda-hospital .status {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.agenda-hospital .agendado {
+  background: #e0f7fa;
+  color: #008b98;
+}
+
+.agenda-hospital .concluido {
+  background: #e7f6ed;
+  color: #218653;
+}
+
+.agenda-hospital .cancelado {
+  background: #fdebec;
+  color: #c0392b;
+}
+
+/* Botões */
+
+.agenda-hospital button {
+  padding: 10px 16px;
+  border: 1px solid #dce4ef;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #08265c;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s;
+}
+
+.agenda-hospital button:hover {
+  background: #effaff;
+  border-color: #009aa6;
+  color: #009aa6;
 }

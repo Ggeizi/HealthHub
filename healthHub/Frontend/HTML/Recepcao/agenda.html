@@ -1,52 +1,58 @@
-<section
-    class="recepcao__secao"
-    id="agenda"
->
+<section class="agenda-hospital">
 
-    <div class="recepcao__secao-cabecalho">
+    <header>
+        <h2>Agenda do hospital</h2>
+        <p>Dados fictícios para demonstrar os estados de atendimento.</p>
+    </header>
 
-        <div>
-            <p class="recepcao__etiqueta">
-                Consultas
-            </p>
+    <div class="tabela-container">
 
-            <h1>
-                Agenda do hospital
-            </h1>
-        </div>
-
-        <button
-            type="button"
-            class="botao-secundario"
-            id="atualizar-agenda"
-        >
-            Atualizar
-        </button>
-
-    </div>
-
-    <div class="tabela__container">
-
-        <p id="resumo-agenda" aria-live="polite"></p>
-
-    <table class="tabela">
+        <table>
 
             <thead>
                 <tr>
-                    <th>Data</th>
-                    <th>Paciente</th>
-                    <th>Médico</th>
-                    <th>Status</th>
-                    <th>Ação</th>
+                    <th scope="col">DATA / HORA</th>
+                    <th scope="col">PACIENTE</th>
+                    <th scope="col">MÉDICO</th>
+                    <th scope="col">STATUS</th>
+                    <th scope="col">AÇÃO</th>
                 </tr>
             </thead>
 
-            <tbody id="tabela-agenda">
+            <tbody>
 
                 <tr>
-                    <td colspan="5">
-                        Carregando agenda...
+                    <td>16 nov · 09:00</td>
+                    <td>Ana Oliveira</td>
+                    <td>Dra. Clara Lima</td>
+                    <td>
+                        <span class="status agendado">Agendado</span>
                     </td>
+                    <td>
+                        <button type="button">Cancelar</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>16 nov · 10:30</td>
+                    <td>Pedro Santos</td>
+                    <td>Dr. Lucas Costa</td>
+                    <td>
+                        <span class="status concluido">Concluído</span>
+                    </td>
+                    <td>
+                        <button type="button">Ver atendimento</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>16 nov · 11:00</td>
+                    <td>Maria Souza</td>
+                    <td>Dra. Clara Lima</td>
+                    <td>
+                        <span class="status cancelado">Cancelado</span>
+                    </td>
+                    <td>—</td>
                 </tr>
 
             </tbody>
@@ -54,11 +60,5 @@
         </table>
 
     </div>
-
-    <p
-        id="mensagem-agenda"
-        class="mensagem"
-        role="alert"
-    ></p>
 
 </section>

@@ -1,0 +1,105 @@
+/* Barra lateral */
+
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  padding: 24px 12px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-right: 1px solid #dce4ef;
+  font-family: "Inter", sans-serif;
+}
+
+/* Cabeçalho */
+
+.header-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.header-logo h1 {
+  margin: 0;
+  color: #08265c;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.header-sidebar p {
+  margin: 0;
+  color: #8b9dba;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Navegação */
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Links */
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 44px;
+  padding: 0 14px;
+  gap: 1rem;
+  color: #435b80;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+/* Ícones */
+
+.sidebar nav svg,
+.sidebar nav img {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+}
+
+/* Hover */
+
+.sidebar a:hover {
+  background: #effaff;
+  color: #009aa6;
+}
+
+/* Link ativo */
+
+.sidebar a.ativo {
+  background: #e8f7f8;
+  color: #009aa6;
+  font-weight: 600;
+}
+
+/* Acessibilidade */
+
+.sidebar a:focus-visible {
+  outline: 2px solid #009aa6;
+  outline-offset: 2px;
+}

@@ -1,33 +1,128 @@
-#cadastro-medico {
-    border-left: 4px solid #087887;
+.cadastro-medico {
+  width: 100%;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #dce4ef;
+  border-radius: 18px;
+  box-sizing: border-box;
 }
 
-#cadastro-medico .recepcao__secao-cabecalho {
-    padding-bottom: 16px;
-    border-bottom: 1px solid #e1eaee;
+/* Cabeçalho */
+
+.cadastro-medico header {
+  margin-bottom: 24px;
 }
 
-#cadastro-medico .recepcao__formulario {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px 18px;
+.cadastro-medico h1 {
+  margin: 0 0 8px;
+  color: #08265c;
+  font-size: 24px;
+  font-weight: 700;
 }
 
-#cadastro-medico .botao-principal {
-    grid-column: 1 / -1;
-    justify-self: start;
+.cadastro-medico p {
+  margin: 0;
+  color: #435b80;
+  font-size: 14px;
 }
 
-#cadastro-medico .mensagem {
-    grid-column: 1 / -1;
+/* Formulário */
+
+#form-medico {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
 }
 
-@media (max-width: 650px) {
-    #cadastro-medico .recepcao__formulario {
-        grid-template-columns: 1fr;
-    }
+#form-medico > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
 
-    #cadastro-medico .botao-principal {
-        width: 100%;
-    }
+/* Labels */
+
+#form-medico label {
+  color: #08265c;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Campos */
+
+#form-medico input,
+#form-medico select {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border: 1px solid #dce4ef;
+  border-radius: 8px;
+
+  color: #08265c;
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+#form-medico input::placeholder {
+  color: #8b9dba;
+}
+
+/* Foco */
+
+#form-medico input:focus,
+#form-medico select:focus {
+  border-color: #009aa6;
+  box-shadow: 0 0 0 3px rgba(0, 154, 166, 0.12);
+}
+
+/* Botão */
+
+#form-medico button {
+  grid-column: 1 / -1;
+  justify-self: start;
+
+  min-height: 44px;
+  padding: 0 24px;
+
+  background: #009aa6;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#form-medico button:hover {
+  background: #008b98;
+}
+
+/* Responsividade */
+
+@media (max-width: 700px) {
+  .cadastro-medico {
+    padding: 20px;
+  }
+
+  #form-medico {
+    grid-template-columns: 1fr;
+  }
+
+  #form-medico button {
+    width: 100%;
+  }
 }
