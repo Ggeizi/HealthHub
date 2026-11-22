@@ -1,7 +1,6 @@
 @import url("./index.css");
-
 @import url("./cabecalho.css");
-@import url("./formulario.css");
-@import url("./aviso.css");
-@import url("./apresentacao.css");
-@import url("./footer.css");
+@import url("./menu.css");
+@import url("./resumo.css");
+@import url("./rodape.css");
+

@@ -73,7 +73,7 @@ function preencherTabela(hospitais) {
     if (hospitais.length === 0) {
         tabela.innerHTML = `
             <tr>
-                <td colspan="5">
+                <td colspan="3">
                     Nenhum hospital cadastrado.
                 </td>
             </tr>
@@ -87,8 +87,6 @@ function preencherTabela(hospitais) {
             <td>${escaparHtml(hospital.nome)}</td>
             <td>${escaparHtml(hospital.cnpj)}</td>
             <td>${escaparHtml(hospital.endereco)}</td>
-            <td>${escaparHtml(hospital.recepcionista)}</td>
-            <td>${escaparHtml(hospital.login)}</td>
         </tr>
     `).join("");
 }
@@ -139,9 +137,17 @@ async function sair() {
 }
 
 function inicializarPainel() {
-    if (painelInicializado) {
-        return;
+    const botaoSair = document.getElementById("logout");
+    if (botaoSair && !botaoSair.dataset.iniciado) {
+        botaoSair.dataset.iniciado = "true";
+        botaoSair.addEventListener("click", sair);
     }
+    const nome = document.getElementById("nome-administrador");
+    if (nome && !nome.dataset.iniciado) {
+        nome.dataset.iniciado = "true";
+        carregarAdministrador().catch(erro => console.error(erro));
+    }
+    if (painelInicializado) return;
 
     const tabela = document.getElementById(
         "tabela-hospitais"
@@ -153,13 +159,6 @@ function inicializarPainel() {
 
     painelInicializado = true;
 
-    const botaoSair = document.getElementById("logout");
-
-    if (botaoSair) {
-        botaoSair.addEventListener("click", sair);
-    }
-
-    carregarAdministrador();
     carregarHospitais();
 }
 
