@@ -1,3 +1,4 @@
+-- Tabela para guardar informações dos hospitais
 CREATE TABLE IF NOT EXISTS hospitais (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(160) NOT NULL,
@@ -6,6 +7,8 @@ CREATE TABLE IF NOT EXISTS hospitais (
     foto MEDIUMTEXT
 ) ENGINE=InnoDB;
 
+
+-- Tabela que contem as informações dos 4 tipos de perfis 
 CREATE TABLE IF NOT EXISTS usuarios (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     id_hospital BIGINT,

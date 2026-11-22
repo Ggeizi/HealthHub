@@ -1,3 +1,4 @@
+-- Tabela para guardar informações dos agendamentos
 CREATE TABLE IF NOT EXISTS agendamentos (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     id_hospital BIGINT NOT NULL,

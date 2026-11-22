@@ -1,3 +1,4 @@
+-- Tabela para guardar informações de prontuários
 CREATE TABLE IF NOT EXISTS prontuarios (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     id_agendamento BIGINT NOT NULL UNIQUE,
