@@ -1,3 +1,4 @@
+
 package com.healthhub.security;
 
 import java.io.IOException;
@@ -23,6 +24,10 @@ class Seguranca {
     @Bean
     SecurityFilterChain regras(HttpSecurity http) throws Exception {
 
+        // Permitir CORS usando CorsConfig.java
+        http.cors(cors -> {});
+
+        // Permissões por perfil
         http.authorizeHttpRequests(acesso -> acesso
             .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
             .requestMatchers(
@@ -41,6 +46,7 @@ class Seguranca {
             .anyRequest().denyAll()
         );
 
+        // Login
         http.formLogin(login -> login
             .loginPage("/Login/index.html")
             .loginProcessingUrl("/api/login")
@@ -51,6 +57,7 @@ class Seguranca {
                 json(res, 401, "{\"erro\":\"Login incorreto.\"}"))
         );
 
+        // Logout
         http.logout(logout -> logout
             .logoutUrl("/api/logout")
             .deleteCookies("JSESSIONID")
@@ -58,6 +65,7 @@ class Seguranca {
                 json(res, 200, "{\"ok\":true}"))
         );
 
+        // Tratamento de erros
         http.exceptionHandling(erros -> erros
             .authenticationEntryPoint((req, res, erro) -> {
                 if (req.getServletPath().startsWith("/api/")) {

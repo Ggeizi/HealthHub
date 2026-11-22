@@ -1,15 +1,15 @@
+
 package com.healthhub.config;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Component;
-
+import org.springframework.beans.factory.annotation.Value;
 import com.healthhub.util.Validacao;
 
-@Component
+@Configuration
 class AdminInicial {
 
     @Bean
@@ -20,35 +20,17 @@ class AdminInicial {
             @Value("${healthhub.admin.password}") String senha) {
 
         return args -> {
-
-            if (login.isBlank() || senha.isBlank()) {
-                return;
-            }
-
-            String email = Validacao.email(login);
-            String hash = encoder.encode(Validacao.senha(senha));
-
+            if (login.isBlank() && senha.isBlank()) return;
+            String loginValido = Validacao.email(login);
+            String senhaValida = Validacao.senha(senha);
             banco.sql("""
-                INSERT INTO usuarios (nome, login, senha_hash, perfil)
-                VALUES ('Administrador', :login, :hash, 'ADMIN')
-                ON DUPLICATE KEY UPDATE id = id
-                """)
-                .param("login", email)
-                .param("hash", hash)
-                .update();
-
-            String perfil = banco.sql("""
-                SELECT perfil FROM usuarios WHERE login = :login
-                """)
-                .param("login", email)
-                .query(String.class)
-                .single();
-
-            if (!"ADMIN".equals(perfil)) {
-                throw new IllegalStateException(
-                    "ADMIN_LOGIN já pertence a outro perfil."
-                );
-            }
+            INSERT INTO usuarios (nome, login, senha_hash, perfil)
+            VALUES ('Administrador', :login, :senha, 'ADMIN')
+            ON DUPLICATE KEY UPDATE id = id
+            """)
+            .param("login", loginValido)
+            .param("senha", encoder.encode(senhaValida))
+            .update();
         };
     }
 }
