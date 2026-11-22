@@ -21,19 +21,20 @@ public class HospitalRepository {
     }
 
     // Cadastrar hospital
-    public long cadastrar(String nome, String cnpj, String endereco) {
+    public long cadastrar(String nome, String cnpj, String endereco, String foto) {
 
         // variável que vai armazenar o id
         var chave = new GeneratedKeyHolder();
 
         // comando sql pada cadastro
         banco.sql("""
-            INSERT INTO hospitais (nome, cnpj, endereco)
-            VALUES (:nome, :cnpj, :endereco)
+            INSERT INTO hospitais (nome, cnpj, endereco, foto)
+            VALUES (:nome, :cnpj, :endereco, :foto)
             """)
             .param("nome", nome)
             .param("cnpj", cnpj)
             .param("endereco", endereco)
+            .param("foto", foto)
             .update(chave, "id");
 
         Number id = chave.getKey();
@@ -52,22 +53,29 @@ public class HospitalRepository {
             long hospitalId,
             String nome,
             String email,
-            String hash) {
+            String hash,
+            String foto) {
 
         banco.sql("""
             INSERT INTO usuarios
-                (id_hospital, nome, login, senha_hash, perfil)
+                (id_hospital, nome, login, senha_hash, perfil, foto)
             VALUES
-                (:hospital, :nome, :email, :hash, 'RECEPCAO')
+                (:hospital, :nome, :email, :hash, 'RECEPCAO', :foto)
             """)
             .param("hospital", hospitalId)
             .param("nome", nome)
             .param("email", email)
             .param("hash", hash)
+            .param("foto", foto)
             .update();
     }
 
     // Listar hospitais
+    public boolean existe(long id) {
+        return banco.sql("SELECT id FROM hospitais WHERE id = :id")
+            .param("id", id).query(Long.class).optional().isPresent();
+    }
+
     public List<Map<String, Object>> listar() {
 
         return banco.sql("""

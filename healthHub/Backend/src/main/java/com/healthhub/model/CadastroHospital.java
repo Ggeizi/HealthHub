@@ -1,13 +1,10 @@
 package com.healthhub.model;
 
 public class CadastroHospital {
-
+    private String foto;
     private String nome;
     private String cnpj;
     private String endereco;
-    private String recepcionista;
-    private String login;
-    private String senha;
 
     public CadastroHospital() {}
 
@@ -35,27 +32,15 @@ public class CadastroHospital {
         this.endereco = endereco;
     }
 
-    public String getRecepcionista() {
-        return recepcionista;
+    public String getFoto(){
+        return foto;
     }
 
-    public void setRecepcionista(String recepcionista) {
-        this.recepcionista = recepcionista;
+    public void setFoto(String foto){
+        this.foto = foto;
     }
 
-    public String getLogin() {
-        return login;
-    }
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
 
-    public String getSenha() {
-        return senha;
-    }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
 }

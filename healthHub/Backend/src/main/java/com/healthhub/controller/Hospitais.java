@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.healthhub.model.CadastroHospital;
+import com.healthhub.model.Recepcao;
 import com.healthhub.service.HospitalService;
 
 import org.springframework.http.HttpStatus;
@@ -34,5 +35,12 @@ public class Hospitais {
         long id = service.cadastrar(dados);
 
         return Map.of("id", id);
+    }
+
+    @PostMapping("/recepcao")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Map<String, Boolean> cadastrarRecepcao(@RequestBody Recepcao dados) {
+        service.cadastrarRecepcao(dados);
+        return Map.of("ok", true);
     }
 }

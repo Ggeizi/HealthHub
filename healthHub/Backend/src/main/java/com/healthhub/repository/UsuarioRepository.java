@@ -23,7 +23,7 @@ public class UsuarioRepository {
     // Buscar usuário pelo login
     public Usuario buscarPorLogin(String login) {
         return banco.sql("""
-            SELECT id, nome, login, perfil, id_hospital
+            SELECT id, nome, login, perfil, id_hospital, foto
             FROM usuarios WHERE login = :login
             """)
             .param("login", login)
@@ -33,6 +33,7 @@ public class UsuarioRepository {
                 usuario.setNome(rs.getString("nome"));
                 usuario.setLogin(rs.getString("login"));
                 usuario.setPerfil(rs.getString("perfil"));
+                usuario.setFoto(rs.getString("foto"));
                 usuario.setHospitalId(
                     rs.getObject("id_hospital", Long.class));
                 return usuario;
