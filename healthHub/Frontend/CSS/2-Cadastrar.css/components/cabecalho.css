@@ -34,7 +34,9 @@
 
 .selecao_perfis {
     display: flex;
+    gap:2rem;
     justify-content: center;
+    cursor: pointer;
 }
 
 .perfil {

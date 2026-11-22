@@ -46,6 +46,24 @@
     font-weight: 700;
 }
 
+.campo__label_anexo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 5px;
+    width: 28%;
+    padding:0.2rem;
+    color: #ffffff;
+    background-color: #087887;
+    border-color: #087887;
+}
+
+.campo__label_anexo:hover{
+    background-color: #6987ebe4;
+}
+
 .campo__entrada {
     display: flex;
     align-items: center;

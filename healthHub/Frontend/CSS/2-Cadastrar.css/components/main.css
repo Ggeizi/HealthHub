@@ -9,6 +9,7 @@
 
 /* Formulário */
 @import url("formulario.css");
+@import url("./formulario-cadastro-hospital.css");
 
 /* Aviso */
 @import url("aviso.css");

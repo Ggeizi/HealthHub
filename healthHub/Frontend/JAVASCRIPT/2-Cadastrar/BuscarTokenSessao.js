@@ -1,11 +1,11 @@
 export default async function buscarCsrf() {
-  const resposta = await fetch("/api/csrf", {
-    credentials: "same-origin",
-  });
+    const resposta = await fetch("/api/csrf", {
+        credentials: "same-origin"
+    });
 
-  if (!resposta.ok) {
-    return null;
-  }
+    if (!resposta.ok) {
+        return null;
+    }
 
-  return resposta.json();
+    return resposta.json();
 }

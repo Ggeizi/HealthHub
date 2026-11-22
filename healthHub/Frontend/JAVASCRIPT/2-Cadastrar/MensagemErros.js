@@ -1,10 +1,10 @@
 export default function mostrarMensagem(texto, tipo) {
-  const mensagem = document.getElementById("mensagem-cadastro");
+    const mensagem = document.getElementById("mensagem-cadastro");
 
-  if (!mensagem) {
-    return;
-  }
+    if (!mensagem) {
+        return;
+    }
 
-  mensagem.textContent = texto;
-  mensagem.className = `mensagem ${tipo}`;
+    mensagem.textContent = texto;
+    mensagem.className = `mensagem ${tipo}`;
 }

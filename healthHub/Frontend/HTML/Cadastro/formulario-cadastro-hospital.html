@@ -1,0 +1,22 @@
+<form class="hospital__formulario" id="formulario-hospital">
+  <h2 class="hospital__titulo">Cadastrar hospital</h2>
+  <p class="hospital__descricao">Preencha os dados do hospital.</p>
+  <div class="hospital__campo">
+    <label class="hospital__label" for="nomeHospital">Nome do hospital</label>
+    <input class="hospital__input" id="nomeHospital" name="nome" minlength="3" maxlength="160" required>
+  </div>
+  <div class="hospital__campo">
+    <label class="hospital__label" for="cnpj">CNPJ</label>
+    <input class="hospital__input" id="cnpj" name="cnpj" maxlength="18" required>
+  </div>
+  <div class="hospital__campo">
+    <label class="hospital__label" for="endereco">Endereço</label>
+    <input class="hospital__input" id="endereco" name="endereco" minlength="5" maxlength="255" required>
+  </div>
+  <div class="hospital__campo">
+    <label class="hospital__label" for="fotoHospital">Foto do hospital</label>
+    <input id="fotoHospital" name="foto" type="file" accept="image/png,image/jpeg,image/webp">
+  </div>
+  <button class="hospital__botao" type="submit">Cadastrar hospital</button>
+  <p id="mensagem-cadastro" class="hospital__mensagem" role="alert"></p>
+</form>
