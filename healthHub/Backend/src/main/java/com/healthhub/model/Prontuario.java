@@ -26,27 +26,67 @@ public class Prontuario {
         this.conduta = conduta;
     }
 
-    public long getId() { return id; }
-    public void setId(long id) { this.id = id; }
+        public long getId() {
+        return id;
+        }
 
-    public String getData() { return data; }
-    public void setData(String data) { this.data = data; }
+    public void setId(long id) {
+        this.id = id;
+    }
 
-    public String getMedico() { return medico; }
-    public void setMedico(String medico) { this.medico = medico; }
+    public String getData() {
+        return data;
+    }
 
-    public String getPaciente() { return paciente; }
-    public void setPaciente(String paciente) { this.paciente = paciente; }
+    public void setData(String data) {
+        this.data = data;
+    }
 
-    public String getHospital() { return hospital; }
-    public void setHospital(String hospital) { this.hospital = hospital; }
+    public String getMedico() {
+        return medico;
+    }
 
-    public String getRelato() { return relato; }
-    public void setRelato(String relato) { this.relato = relato; }
+    public void setMedico(String medico) {
+        this.medico = medico;
+    }
 
-    public String getDiagnostico() { return diagnostico; }
-    public void setDiagnostico(String diagnostico) { this.diagnostico = diagnostico; }
+    public String getPaciente() {
+        return paciente;
+    }
 
-    public String getConduta() { return conduta; }
-    public void setConduta(String conduta) { this.conduta = conduta; }
+    public void setPaciente(String paciente) {
+        this.paciente = paciente;
+    }
+
+    public String getHospital() {
+        return hospital;
+    }
+
+    public void setHospital(String hospital) {
+        this.hospital = hospital;
+    }
+
+    public String getRelato() {
+        return relato;
+    }
+
+    public void setRelato(String relato) {
+        this.relato = relato;
+    }
+
+    public String getDiagnostico() {
+        return diagnostico;
+    }
+
+    public void setDiagnostico(String diagnostico) {
+        this.diagnostico = diagnostico;
+    }
+
+    public String getConduta() {
+        return conduta;
+    }
+
+    public void setConduta(String conduta) {
+        this.conduta = conduta;
+    }
 }

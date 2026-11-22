@@ -6,6 +6,8 @@ import com.healthhub.repository.UsuarioRepository;
 import com.healthhub.util.Validacao;
 
 import org.springframework.stereotype.Service;
+
+// Indentifica uma classe como sendo uma transação no banco de dados 
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
@@ -41,17 +43,21 @@ public class AgendamentoService {
             dados.getObservacao(), "observação", 0, 1000
         ));
 
+        // tratando erros
         conferirUsuario(dados.getMedicoId(), hospital, "MEDICO");
         conferirUsuario(dados.getPacienteId(), hospital, "PACIENTE");
 
+        // Bloqueio do hospital temporário até o fim da transação
         agendamentos.bloquearHospital(hospital);
 
+        //Verifica se tem confilto de horário
         if (agendamentos.horarioOcupado(hospital, dados)) {
             throw Validacao.conflito(
                 "Já existe uma consulta para o médico ou paciente nesse horário."
             );
         }
 
+        // Agendar
         agendamentos.cadastrar(hospital, dados);
     }
 

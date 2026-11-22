@@ -1,16 +1,31 @@
 
 package com.healthhub.security;
 
+// Importa a classe que representa erros de entrada e saída de dados
 import java.io.IOException;
 
+// Importa o enum que identifica o tipo de encaminhamento de uma requisição
 import jakarta.servlet.DispatcherType;
+
+// Importa a interface que permite configurar respostas HTTP
 import jakarta.servlet.http.HttpServletResponse;
 
+// Importa a anotação que registra objetos gerenciados pelo Spring
 import org.springframework.context.annotation.Bean;
+
+// Importa a anotação que identifica uma classe de configuração do Spring
 import org.springframework.context.annotation.Configuration;
+
+// Importa a classe que permite configurar a segurança das requisições HTTP
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+
+// Importa a classe que implementa a criptografia de hash de senhas com BCrypt
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+// Importa a interface responsável por codificar e verificar senhas
 import org.springframework.security.crypto.password.PasswordEncoder;
+
+// Importa a interface que representa a cadeia de filtros de segurança HTTP
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
@@ -83,6 +98,7 @@ class Seguranca {
         return http.build();
     }
 
+    // Método que verifica se o login foi realizado com sucesso ou se o acesso foi negado
     private static void json(
             HttpServletResponse res, int status, String conteudo
     ) throws IOException {

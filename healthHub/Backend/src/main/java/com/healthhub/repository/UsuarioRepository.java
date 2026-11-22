@@ -1,14 +1,21 @@
 
 package com.healthhub.repository;
 
+// Importa uma interface que armazena e manipula uma lista de elementos
 import java.util.List;
+
+// Importa a interface que armazena dados em pares de chave e valor
 import java.util.Map;
 
+// Importa as classes usuario, médico e paciente
 import com.healthhub.model.Usuario;
 import com.healthhub.model.Medico;
 import com.healthhub.model.Paciente;
 
+// Importa a classe que permite realizar de maneria mais fácil operações no banco de dados
 import org.springframework.jdbc.core.simple.JdbcClient;
+
+// Importa uma anotação que indentifica uma classe repository (persistencia)
 import org.springframework.stereotype.Repository;
 
 @Repository

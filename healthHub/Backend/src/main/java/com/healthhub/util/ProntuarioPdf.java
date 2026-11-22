@@ -1,39 +1,64 @@
+
 package com.healthhub.util;
 
 import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 
 import com.healthhub.model.Prontuario;
-import com.lowagie.text.Document;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.pdf.PdfWriter;
+import com.lowagie.text.pdf.PdfReader;
+import com.lowagie.text.pdf.PdfStamper;
+import com.lowagie.text.pdf.AcroFields;
 
 public final class ProntuarioPdf {
 
     private ProntuarioPdf() {}
 
     public static byte[] gerar(Prontuario prontuario) {
-        try {
-            ByteArrayOutputStream saida = new ByteArrayOutputStream();
-            Document pdf = new Document();
+        try (
+            InputStream modelo = ProntuarioPdf.class
+                .getResourceAsStream("/pdf/modelo-prontuario.pdf");
 
-            PdfWriter.getInstance(pdf, saida);
-            pdf.open();
+            ByteArrayOutputStream saida = new ByteArrayOutputStream()
+        ) {
+            if (modelo == null) {
+                throw new IllegalStateException(
+                    "Modelo de prontuário não encontrado."
+                );
+            }
 
-            pdf.add(new Paragraph("PRONTUÁRIO - HEALTHHUB"));
-            pdf.add(new Paragraph("Hospital: " + prontuario.getHospital()));
-            pdf.add(new Paragraph("Paciente: " + prontuario.getPaciente()));
-            pdf.add(new Paragraph("Médico: " + prontuario.getMedico()));
-            pdf.add(new Paragraph("Data: " + prontuario.getData()));
+            PdfReader leitor = new PdfReader(modelo);
 
-            pdf.add(new Paragraph("\nRELATO\n" + prontuario.getRelato()));
-            pdf.add(new Paragraph("\nDIAGNÓSTICO\n" + prontuario.getDiagnostico()));
-            pdf.add(new Paragraph("\nCONDUTA\n" + prontuario.getConduta()));
+            try {
+                PdfStamper editor = new PdfStamper(leitor, saida);
 
-            pdf.close();
+                try {
+                    AcroFields campos = editor.getAcroFields();
+
+                    campos.setField("hospital", prontuario.getHospital());
+                    campos.setField("paciente", prontuario.getPaciente());
+                    campos.setField("medico", prontuario.getMedico());
+                    campos.setField("data", String.valueOf(prontuario.getData()));
+
+                    campos.setField("relato", prontuario.getRelato());
+                    campos.setField("diagnostico", prontuario.getDiagnostico());
+                    campos.setField("conduta", prontuario.getConduta());
+
+                    // Transforma os campos preenchidos em conteúdo fixo.
+                    editor.setFormFlattening(true);
+
+                } finally {
+                    editor.close();
+                }
+            } finally {
+                leitor.close();
+            }
+
             return saida.toByteArray();
 
         } catch (Exception e) {
-            throw new IllegalStateException("Erro ao gerar PDF", e);
+            throw new IllegalStateException(
+                "Erro ao gerar PDF do prontuário.", e
+            );
         }
     }
 }
