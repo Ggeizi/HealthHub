@@ -1,34 +1,15 @@
 <header class="login__cabecalho">
-
-    <div class="logo-principal">
-        <img
-            src="../../CSS/1-Login.css/assets/logo/logo-principal.svg"
-            alt="HealthHub"
-        >
+  <div class="logo-principal">
+    <img src="../../CSS/1-Login.css/assets/logo/logo-principal.svg" alt="HealthHub">
+  </div>
+  <div class="perfis-usuario">
+    <p class="login__instrucao">PAINEL DE CADASTRO</p>
+    <div class="selecao_perfis">
+      <button type="button" class="perfil" hx-get="formulario-cadastro-hospital.html"
+        hx-target="#formulario" hx-swap="innerHTML">Hospital</button>
+      <button type="button" class="perfil" hx-get="formulario-recepcao.html"
+        hx-target="#formulario" hx-swap="innerHTML">Recepção</button>
     </div>
-
-    <div class="perfis-usuario">
-
-        <p class="login__instrucao">
-            Cadastro do hospital
-        </p>
-
-        <div class="selecao_perfis">
-
-            <div
-                class="perfil selecionado"
-                id="administrador"
-            >
-                <img
-                    src="../../CSS/1-Login.css/assets/icones/gestao-integrada.svg"
-                    alt="Administrador"
-                >
-
-                <p>Administrador</p>
-            </div>
-
-        </div>
-
-    </div>
-
+    <a href="../Admin/index.html">Voltar ao painel</a>
+  </div>
 </header>

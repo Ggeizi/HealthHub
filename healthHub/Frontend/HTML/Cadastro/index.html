@@ -21,30 +21,27 @@
         href="../../CSS/2-Cadastrar.css/components/main.css"
     >
 
-    <script
+   <script
         src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.11/dist/htmx.min.js"
         defer
     ></script>
+
 </head>
 
 <body class="pagina">
 
-    <main class="principal">
+    <main  class="principal">
 
         <section class="login">
 
             <div
-                hx-get="cabecalho.html"
-                hx-trigger="load"
-                hx-swap="outerHTML"
+                id="cabecalho"
             ></div>
 
             <hr class="login__divisor">
 
             <div
-                hx-get="formulario.html"
-                hx-trigger="load"
-                hx-swap="outerHTML"
+                id="formulario"
             ></div>
 
         </section>
@@ -63,7 +60,7 @@
         hx-swap="outerHTML"
     ></div>
 
-    <script src="../../JAVASCRIPT/2-Cadastrar/Cadastrar.js"></script>
+    <script type="module" src="../../JAVASCRIPT/2-Cadastrar/Main.js"></script>
 
 </body>
 
