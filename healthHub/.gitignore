@@ -1,3 +1,18 @@
-Backend/target/
+# Configurações privadas e senhas
 .env
+.env.*
+
+# Arquivos gerados pelo Maven
+**/target/
+
+# Arquivos do VS Code específicos da máquina
+.vscode/
+
+# Arquivos temporários e logs
 *.log
+*.tmp
+*.bak
+
+# Arquivos do Windows
+Thumbs.db
+Desktop.ini
