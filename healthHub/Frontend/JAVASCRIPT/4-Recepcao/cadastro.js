@@ -19,6 +19,7 @@ async function cadastrarMedico(event) {
         });
 
         formulario.reset();
+        atualizarTotais();
 
         mostrarMensagem(
             "mensagem-medico",
@@ -62,6 +63,7 @@ async function cadastrarPaciente(event) {
         });
 
         formulario.reset();
+        atualizarTotais();
 
         mostrarMensagem(
             "mensagem-paciente",

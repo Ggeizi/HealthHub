@@ -80,6 +80,7 @@ async function criarAgendamento(event) {
         });
 
         formulario.reset();
+        atualizarTotais();
 
         mostrarMensagem(
             "mensagem-agendamento",

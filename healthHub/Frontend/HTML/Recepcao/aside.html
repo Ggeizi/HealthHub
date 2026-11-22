@@ -1,0 +1,73 @@
+<aside class="sidebar">
+
+    <header class="header-sidebar">
+        <div class="header-logo">
+            <img src="../../CSS/1-Login.css/assets/logo/simbolo.svg"/>
+            <h1>HEALTH</h1>
+            
+        </div>
+        <p>ESPAÇO DE TRABALHO</p>
+       
+    </header>
+    
+
+    <nav>
+        <a
+            href="agenda.html"
+            onclick="selecionarMenu(event)"
+            class="ativo"
+            hx-get="agenda.html"
+            hx-target="#conteudo-dinamico"
+            hx-swap="innerHTML"
+        >
+            <img
+                src="../../CSS/4-Recepcao.css/assets/icon-calendar.svg"
+                alt="Ícone de agenda"
+            >
+            <span>Agenda</span>
+        </a>
+
+        <a
+            href="agendamento.html"
+            onclick="selecionarMenu(event)"
+            hx-get="agendamento.html"
+            hx-target="#conteudo-dinamico"
+            hx-swap="innerHTML"
+        >
+            <img
+                src="../../CSS/4-Recepcao.css/assets/icon-calendar.svg"
+                alt="Ícone de agendamento"
+            >
+            <span>Novo Agendamento</span>
+        </a>
+
+        <a
+            href="cadastrar-medico.html"
+            onclick="selecionarMenu(event)"
+            hx-get="cadastrar-medico.html"
+            hx-target="#conteudo-dinamico"
+            hx-swap="innerHTML"
+        >
+            <img
+                src="../../CSS/4-Recepcao.css/assets/icon-doctor.svg"
+                alt="Ícone de médico"
+            >
+            <span>Cadastrar Médico</span>
+        </a>
+
+        <a
+            href="cadastrar-paciente.html"
+            onclick="selecionarMenu(event)"
+            hx-get="cadastrar-paciente.html"
+            hx-target="#conteudo-dinamico"
+            hx-swap="innerHTML"
+        >
+            <img
+                src="../../CSS/4-Recepcao.css/assets/icon-patients.svg"
+                alt="Ícone de paciente"
+            >
+            <span>Cadastrar Paciente</span>
+        </a>
+    </nav>
+
+</aside>

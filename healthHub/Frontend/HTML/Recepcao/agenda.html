@@ -1,64 +1,10 @@
-<section
-    class="recepcao__secao"
-    id="agenda"
->
-
-    <div class="recepcao__secao-cabecalho">
-
-        <div>
-            <p class="recepcao__etiqueta">
-                Consultas
-            </p>
-
-            <h1>
-                Agenda do hospital
-            </h1>
-        </div>
-
-        <button
-            type="button"
-            class="botao-secundario"
-            id="atualizar-agenda"
-        >
-            Atualizar
-        </button>
-
-    </div>
-
-    <div class="tabela__container">
-
-        <p id="resumo-agenda" aria-live="polite"></p>
-
-    <table class="tabela">
-
-            <thead>
-                <tr>
-                    <th>Data</th>
-                    <th>Paciente</th>
-                    <th>Médico</th>
-                    <th>Status</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-
-            <tbody id="tabela-agenda">
-
-                <tr>
-                    <td colspan="5">
-                        Carregando agenda...
-                    </td>
-                </tr>
-
-            </tbody>
-
-        </table>
-
-    </div>
-
-    <p
-        id="mensagem-agenda"
-        class="mensagem"
-        role="alert"
-    ></p>
-
+<section class="agenda-hospital">
+  <header><h2>Agenda do hospital</h2><p>Consultas cadastradas no hospital.</p>
+    <button type="button" id="atualizar-agenda">Atualizar</button>
+  </header>
+  <div class="tabela-container"><table>
+    <thead><tr><th>Data e hora</th><th>Paciente</th><th>Médico</th><th>Status</th><th>Ação</th></tr></thead>
+    <tbody id="tabela-agenda"><tr><td colspan="5">Carregando agenda...</td></tr></tbody>
+  </table></div>
+  <p id="mensagem-agenda" role="alert"></p>
 </section>
