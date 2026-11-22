@@ -1,0 +1,122 @@
+
+/* Container principal */
+
+.cadastro-medico {
+    width: 100%;
+    padding: 28px;
+    background: #FFFFFF;
+    border: 1px solid #DCE4EF;
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho */
+
+.cadastro-medico header {
+    margin-bottom: 24px;
+}
+
+.cadastro-medico h1 {
+    margin: 0 0 8px;
+    color: #08265C;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.cadastro-medico header p {
+    margin: 0;
+    color: #435B80;
+    font-size: 14px;
+}
+
+/* Formulário */
+
+#formulario-medico {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#formulario-medico > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+/* Labels */
+
+#formulario-medico label {
+    color: #08265C;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Campos */
+
+#formulario-medico input,
+#formulario-medico select {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+    border: 1px solid #DCE4EF;
+    border-radius: 8px;
+
+    color: #08265C;
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#formulario-medico input::placeholder {
+    color: #8B9DBA;
+}
+
+/* Foco */
+
+#formulario-medico input:focus,
+#formulario-medico select:focus {
+    border-color: #009AA6;
+    box-shadow: 0 0 0 3px rgba(0, 154, 166, 0.12);
+}
+
+/* Botão */
+
+#formulario-medico button {
+    grid-column: 1 / -1;
+    justify-self: start;
+
+    min-height: 44px;
+    padding: 0 24px;
+
+    background: #009AA6;
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#formulario-medico button:hover {
+    background: #008B98;
+}
+
+/* Mensagem de retorno */
+
+#mensagem-medico {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 14px;
+}
+

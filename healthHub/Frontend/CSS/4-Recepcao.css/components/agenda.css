@@ -1,128 +1,130 @@
+
 /* Container principal */
 
 .agenda-hospital {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 30px;
-  width: 100%;
-  box-sizing: border-box;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Cabeçalho */
 
 .agenda-hospital header {
-  margin-bottom: 28px;
+    margin-bottom: 28px;
 }
 
 .agenda-hospital h2 {
-  font-size: 30px;
-  font-weight: 700;
-  color: #08265c;
-  margin: 0 0 16px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #08265C;
+    margin: 0 0 16px;
 }
 
 .agenda-hospital header p {
-  font-size: 18px;
-  font-weight: 400;
-  color: #000000;
-  margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0;
 }
 
 /* Container da tabela */
 
 .agenda-hospital .tabela-container {
-  width: 100%;
-  overflow-x: auto;
-  border: 1px solid #dce4ef;
-  border-radius: 10px;
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #DCE4EF;
+    border-radius: 10px;
 }
 
 /* Tabela */
 
 .agenda-hospital table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  font-size: 16px;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 16px;
 }
 
 /* Cabeçalho da tabela */
 
 .agenda-hospital thead {
-  background: #effaff;
+    background: #EFFAFF;
 }
 
 .agenda-hospital th {
-  padding: 18px 20px;
-  color: #08265c;
-  font-size: 14px;
-  font-weight: 700;
-  white-space: nowrap;
-  border-bottom: 1px solid #dce4ef;
+    padding: 18px 20px;
+    color: #08265C;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    border-bottom: 1px solid #DCE4EF;
 }
 
 /* Células */
 
 .agenda-hospital td {
-  padding: 18px 20px;
-  color: #435b80;
-  border-bottom: 1px solid #dce4ef;
-  vertical-align: middle;
+    padding: 18px 20px;
+    color: #435B80;
+    border-bottom: 1px solid #DCE4EF;
+    vertical-align: middle;
 }
 
 .agenda-hospital tbody tr:last-child td {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 /* Efeito hover */
 
 .agenda-hospital tbody tr:hover {
-  background: #f5fcff;
+    background: #F5FCFF;
 }
 
 /* Status */
 
 .agenda-hospital .status {
-  display: inline-block;
-  padding: 7px 14px;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 600;
-  white-space: nowrap;
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .agenda-hospital .agendado {
-  background: #e0f7fa;
-  color: #008b98;
+    background: #E0F7FA;
+    color: #008B98;
 }
 
 .agenda-hospital .concluido {
-  background: #e7f6ed;
-  color: #218653;
+    background: #E7F6ED;
+    color: #218653;
 }
 
 .agenda-hospital .cancelado {
-  background: #fdebec;
-  color: #c0392b;
+    background: #FDEBEC;
+    color: #C0392B;
 }
 
 /* Botões */
 
 .agenda-hospital button {
-  padding: 10px 16px;
-  border: 1px solid #dce4ef;
-  border-radius: 8px;
-  background: #ffffff;
-  color: #08265c;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: 0.2s;
+    padding: 10px 16px;
+    border: 1px solid #DCE4EF;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #08265C;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.2s;
 }
 
 .agenda-hospital button:hover {
-  background: #effaff;
-  border-color: #009aa6;
-  color: #009aa6;
+    background: #EFFAFF;
+    border-color: #009AA6;
+    color: #009AA6;
 }
+

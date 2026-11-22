@@ -1,0 +1,124 @@
+
+/* Seção principal */
+
+.cadastro-paciente {
+    width: 100%;
+    padding: 28px;
+    background: #FFFFFF;
+    border: 1px solid #DCE4EF;
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho */
+
+.cadastro-paciente header {
+    margin-bottom: 24px;
+}
+
+.cadastro-paciente h1 {
+    margin: 0 0 8px;
+    color: #08265C;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.cadastro-paciente header p {
+    margin: 0;
+    color: #435B80;
+    font-size: 14px;
+}
+
+/* Formulário */
+
+#formulario-paciente {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Grupos de campos */
+
+#formulario-paciente > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+/* Labels */
+
+#formulario-paciente label {
+    color: #08265C;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Inputs */
+
+#formulario-paciente input {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+    border: 1px solid #DCE4EF;
+    border-radius: 8px;
+
+    color: #08265C;
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Placeholder */
+
+#formulario-paciente input::placeholder {
+    color: #8B9DBA;
+}
+
+/* Foco */
+
+#formulario-paciente input:focus {
+    border-color: #009AA6;
+    box-shadow: 0 0 0 3px rgba(0, 154, 166, 0.12);
+}
+
+/* Botão */
+
+#formulario-paciente button {
+    grid-column: 1 / -1;
+    justify-self: start;
+
+    min-height: 44px;
+    padding: 0 24px;
+
+    background: #009AA6;
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#formulario-paciente button:hover {
+    background: #008B98;
+}
+
+/* Mensagem de retorno */
+
+#mensagem-paciente {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 14px;
+}
+

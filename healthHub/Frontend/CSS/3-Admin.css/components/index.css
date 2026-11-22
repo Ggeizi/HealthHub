@@ -42,12 +42,3 @@ a {
   padding: 36px;
 }
 
-@media (max-width: 800px) {
-  .admin__principal {
-    display: block;
-  }
-
-  .admin__conteudo {
-    padding: 24px 16px;
-  }
-}

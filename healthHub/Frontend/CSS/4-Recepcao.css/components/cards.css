@@ -1,53 +1,54 @@
+
 /* Resumo da recepção */
 
 .recepcao-resumo {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
 
-  width: 100%;
+    width: 100%;
 }
 
 /* Cards */
 
 .recepcao-resumo > div {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 
-  padding: 20px;
+    padding: 20px;
 
-  background: #ffffff;
-  border: 1px solid #dce4ef;
-  border-radius: 12px;
+    background: #FFFFFF;
+    border: 1px solid #DCE4EF;
+    border-radius: 12px;
 }
 
 /* Títulos */
 
 .recepcao-resumo h2 {
-  margin: 0;
+    margin: 0;
 
-  color: #08265c;
-  font-family: "Inter", sans-serif;
-  font-size: 13px;
-  font-weight: 600;
+    color: #08265C;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 /* Quantidades */
 
 .recepcao-resumo p {
-  margin: 0;
+    margin: 0;
 
-  color: #009aa6;
-  font-family: "Inter", sans-serif;
-  font-size: 28px;
-  font-weight: 700;
+    color: #009AA6;
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 /* Responsividade */
 
 @media (max-width: 700px) {
-  .recepcao-resumo {
-    grid-template-columns: 1fr;
-  }
+    .recepcao-resumo {
+        grid-template-columns: 1fr;
+    }
 }
