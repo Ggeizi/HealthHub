@@ -5,38 +5,49 @@
         <p>Escolha o profissional, o paciente e o horário da consulta.</p>
     </header>
 
-    <form id="form-agendamento">
+    <form id="formulario-agendamento">
 
         <div class="campos-agendamento">
 
             <div>
-                <label for="medico">Médico:</label>
-                <select id="medico" name="medico" required>
+                <label for="medicoAgendamento">Médico:</label>
+                <select id="medicoAgendamento" name="medicoId" required>
                     <option value="" disabled selected>Selecione o médico</option>
                 </select>
             </div>
 
             <div>
-                <label for="paciente">Paciente:</label>
-                <select id="paciente" name="paciente" required>
+                <label for="pacienteAgendamento">Paciente:</label>
+                <select id="pacienteAgendamento" name="pacienteId" required>
                     <option value="" disabled selected>Selecione o paciente</option>
                 </select>
             </div>
 
             <div>
                 <label for="data-hora">Data e hora:</label>
-                <input type="datetime-local" id="data-hora" name="dataHora" required>
+                <input
+                    type="datetime-local"
+                    id="data-hora"
+                    name="inicio"
+                    required
+                >
             </div>
 
         </div>
 
         <div>
             <label for="observacao">Observação (opcional):</label>
-            <input type="text" id="observacao" name="observacao" placeholder="Adicione informações para o atendimento">
+            <input
+                type="text"
+                id="observacao"
+                name="observacao"
+                placeholder="Adicione informações para o atendimento"
+            >
         </div>
 
         <button class="botao" type="submit">Agendar consulta</button>
 
+        <p id="mensagem-agendamento" role="alert"></p>
     </form>
 
 </section>

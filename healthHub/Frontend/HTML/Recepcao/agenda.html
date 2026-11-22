@@ -1,64 +1,10 @@
 <section class="agenda-hospital">
-
-    <header>
-        <h2>Agenda do hospital</h2>
-        <p>Dados fictícios para demonstrar os estados de atendimento.</p>
-    </header>
-
-    <div class="tabela-container">
-
-        <table>
-
-            <thead>
-                <tr>
-                    <th scope="col">DATA / HORA</th>
-                    <th scope="col">PACIENTE</th>
-                    <th scope="col">MÉDICO</th>
-                    <th scope="col">STATUS</th>
-                    <th scope="col">AÇÃO</th>
-                </tr>
-            </thead>
-
-            <tbody>
-
-                <tr>
-                    <td>16 nov · 09:00</td>
-                    <td>Ana Oliveira</td>
-                    <td>Dra. Clara Lima</td>
-                    <td>
-                        <span class="status agendado">Agendado</span>
-                    </td>
-                    <td>
-                        <button type="button">Cancelar</button>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>16 nov · 10:30</td>
-                    <td>Pedro Santos</td>
-                    <td>Dr. Lucas Costa</td>
-                    <td>
-                        <span class="status concluido">Concluído</span>
-                    </td>
-                    <td>
-                        <button type="button">Ver atendimento</button>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>16 nov · 11:00</td>
-                    <td>Maria Souza</td>
-                    <td>Dra. Clara Lima</td>
-                    <td>
-                        <span class="status cancelado">Cancelado</span>
-                    </td>
-                    <td>—</td>
-                </tr>
-
-            </tbody>
-
-        </table>
-
-    </div>
-
+  <header><h2>Agenda do hospital</h2><p>Consultas cadastradas no hospital.</p>
+    <button type="button" id="atualizar-agenda">Atualizar</button>
+  </header>
+  <div class="tabela-container"><table>
+    <thead><tr><th>Data e hora</th><th>Paciente</th><th>Médico</th><th>Status</th><th>Ação</th></tr></thead>
+    <tbody id="tabela-agenda"><tr><td colspan="5">Carregando agenda...</td></tr></tbody>
+  </table></div>
+  <p id="mensagem-agenda" role="alert"></p>
 </section>

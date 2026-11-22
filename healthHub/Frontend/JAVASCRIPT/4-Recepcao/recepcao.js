@@ -85,6 +85,28 @@ function inicializarRecepcao() {
         botaoSair.dataset.iniciado = "true";
         botaoSair.addEventListener("click", sair);
     }
+    const totais = document.getElementById("total-medicos");
+    if (totais && !totais.dataset.iniciado) {
+        totais.dataset.iniciado = "true";
+        atualizarTotais();
+    }
+}
+
+async function atualizarTotais() {
+    try {
+        const dados = await Promise.all([
+            requisicao("/api/recepcao/medicos"),
+            requisicao("/api/recepcao/pacientes"),
+            requisicao("/api/recepcao/agendamentos")
+        ]);
+        ["total-medicos", "total-pacientes", "total-agendamentos"]
+            .forEach((id, i) => {
+                const elemento = document.getElementById(id);
+                if (elemento) elemento.textContent = dados[i].length;
+            });
+    } catch (erro) {
+        console.error("Não foi possível atualizar o resumo.", erro);
+    }
 }
 
 document.addEventListener(

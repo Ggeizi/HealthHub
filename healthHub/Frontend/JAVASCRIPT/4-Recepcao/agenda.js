@@ -1,28 +1,32 @@
 function formatarData(data) {
-  return new Date(data).toLocaleString("pt-BR");
+    return new Date(data).toLocaleString("pt-BR");
 }
 
 function classeStatus(status) {
-  const classes = {
-    CANCELADO: "tabela__status--cancelado",
-    CONCLUIDO: "tabela__status--concluido",
-  };
+    const classes = {
+        CANCELADO: "tabela__status--cancelado",
+        CONCLUIDO: "tabela__status--concluido"
+    };
 
-  return classes[status] || "";
+    return classes[status] || "";
 }
 
 async function carregarAgenda() {
-  const tabela = document.getElementById("tabela-agenda");
+    const tabela = document.getElementById(
+        "tabela-agenda"
+    );
 
-  if (!tabela) {
-    return;
-  }
+    if (!tabela) {
+        return;
+    }
 
-  try {
-    const agendamentos = await requisicao("/api/recepcao/agendamentos");
+    try {
+        const agendamentos = await requisicao(
+            "/api/recepcao/agendamentos"
+        );
 
-    if (agendamentos.length === 0) {
-      tabela.innerHTML = `
+        if (agendamentos.length === 0) {
+            tabela.innerHTML = `
                 <tr>
                     <td colspan="5">
                         Nenhum agendamento encontrado.
@@ -30,15 +34,15 @@ async function carregarAgenda() {
                 </tr>
             `;
 
-      return;
-    }
+            return;
+        }
 
-    tabela.innerHTML = agendamentos
-      .map(
-        (agendamento) => `
+        tabela.innerHTML = agendamentos.map(agendamento => `
             <tr>
                 <td>
-                    ${escaparHtml(formatarData(agendamento.inicio))}
+                    ${escaparHtml(
+                        formatarData(agendamento.inicio)
+                    )}
                 </td>
 
                 <td>
@@ -51,7 +55,7 @@ async function carregarAgenda() {
 
                 <td>
                     <span class="tabela__status ${classeStatus(
-                      agendamento.status,
+                        agendamento.status
                     )}">
                         ${escaparHtml(agendamento.status)}
                     </span>
@@ -59,8 +63,8 @@ async function carregarAgenda() {
 
                 <td>
                     ${
-                      agendamento.status === "AGENDADO"
-                        ? `
+                        agendamento.status === "AGENDADO"
+                            ? `
                                 <button
                                     class="botao-cancelar"
                                     data-id="${agendamento.id}"
@@ -69,57 +73,87 @@ async function carregarAgenda() {
                                     Cancelar
                                 </button>
                             `
-                        : "—"
+                            : "—"
                     }
                 </td>
             </tr>
-        `,
-      )
-      .join("");
+        `).join("");
 
-    document.querySelectorAll(".botao-cancelar").forEach((botao) => {
-      botao.addEventListener("click", cancelarAgendamento);
-    });
-  } catch (erro) {
-    mostrarMensagem("mensagem-agenda", erro.message);
-  }
+        document
+            .querySelectorAll(".botao-cancelar")
+            .forEach(botao => {
+                botao.addEventListener(
+                    "click",
+                    cancelarAgendamento
+                );
+            });
+
+    } catch (erro) {
+        mostrarMensagem(
+            "mensagem-agenda",
+            erro.message
+        );
+    }
 }
 
 async function cancelarAgendamento(event) {
-  const id = event.currentTarget.dataset.id;
+    const id = event.currentTarget.dataset.id;
 
-  if (!window.confirm("Deseja cancelar este agendamento?")) {
-    return;
-  }
+    if (!window.confirm("Deseja cancelar este agendamento?")) {
+        return;
+    }
 
-  try {
-    await requisicao(`/api/recepcao/agendamentos/${id}/cancelar`, {
-      method: "PATCH",
-    });
+    try {
+        await requisicao(
+            `/api/recepcao/agendamentos/${id}/cancelar`,
+            {
+                method: "PATCH"
+            }
+        );
 
-    await carregarAgenda();
-  } catch (erro) {
-    mostrarMensagem("mensagem-agenda", erro.message);
-  }
+        await carregarAgenda();
+
+    } catch (erro) {
+        mostrarMensagem(
+            "mensagem-agenda",
+            erro.message
+        );
+    }
 }
 
 function inicializarAgenda() {
-  const tabela = document.getElementById("tabela-agenda");
+    const tabela = document.getElementById(
+        "tabela-agenda"
+    );
 
-  const botaoAtualizar = document.getElementById("atualizar-agenda");
+    const botaoAtualizar = document.getElementById(
+        "atualizar-agenda"
+    );
 
-  if (tabela && !tabela.dataset.iniciado) {
-    tabela.dataset.iniciado = "true";
-    carregarAgenda();
-  }
+    if (tabela && !tabela.dataset.iniciado) {
+        tabela.dataset.iniciado = "true";
+        carregarAgenda();
+    }
 
-  if (botaoAtualizar && !botaoAtualizar.dataset.iniciado) {
-    botaoAtualizar.dataset.iniciado = "true";
+    if (
+        botaoAtualizar &&
+        !botaoAtualizar.dataset.iniciado
+    ) {
+        botaoAtualizar.dataset.iniciado = "true";
 
-    botaoAtualizar.addEventListener("click", carregarAgenda);
-  }
+        botaoAtualizar.addEventListener(
+            "click",
+            carregarAgenda
+        );
+    }
 }
 
-document.addEventListener("DOMContentLoaded", inicializarAgenda);
+document.addEventListener(
+    "DOMContentLoaded",
+    inicializarAgenda
+);
 
-document.addEventListener("htmx:afterSwap", inicializarAgenda);
+document.addEventListener(
+    "htmx:afterSwap",
+    inicializarAgenda
+);

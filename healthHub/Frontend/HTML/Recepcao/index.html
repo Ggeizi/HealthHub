@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -7,27 +8,54 @@
 
     <title>Recepção | HealthHub</title>
 
-    <link rel="icon" type="image/svg+xml" href="../../assets/logo/simbolo.svg">
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="../../CSS/1-Login.css/assets/logo/simbolo.svg"
+    >
 
-    <link rel="stylesheet" href="../../CSS/4-Recepcao.css/components/main.css">
+    <link
+        rel="stylesheet"
+        href="../../CSS/4-Recepcao.css/components/main.css"
+    >
 
-    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.11/dist/htmx.min.js" defer></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.11/dist/htmx.min.js"
+        defer
+    ></script>
 </head>
 
 <body class="pagina">
 
     <main class="recepcao__principal">
 
-        <div hx-get="aside.html" hx-trigger="load" hx-swap="outerHTML"></div>
+        <div
+            hx-get="aside.html"
+            hx-trigger="load"
+            hx-swap="outerHTML"
+        ></div>
 
         <div class="recepcao__conteudo">
 
-            <div hx-get="header.html" hx-trigger="load" hx-swap="outerHTML"></div>
+            <div
+                hx-get="header.html"
+                hx-trigger="load"
+                hx-swap="outerHTML"
+            ></div>
 
-            <div hx-get="cards.html" hx-trigger="load" hx-swap="outerHTML"></div>
+            <div
+                hx-get="cards.html"
+                hx-trigger="load"
+                hx-swap="outerHTML"
+            ></div>
 
             <!-- Área dinâmica -->
-            <div id="conteudo-dinamico" hx-get="agenda.html" hx-trigger="load" hx-swap="innerHTML"></div>
+            <div
+                id="conteudo-dinamico"
+                hx-get="agenda.html"
+                hx-trigger="load"
+                hx-swap="innerHTML"
+            ></div>
 
         </div>
 
@@ -40,8 +68,8 @@
     <script src="../../JAVASCRIPT/4-Recepcao/cadastro.js"></script>
     <script src="../../JAVASCRIPT/4-Recepcao/agendamento.js"></script>
     <script src="../../JAVASCRIPT/4-Recepcao/agenda.js"></script>
+    
 
-
+<script type="module" src="../../JAVASCRIPT/Shared/buscarUsuario.js"></script>
 </body>
-
 </html>
