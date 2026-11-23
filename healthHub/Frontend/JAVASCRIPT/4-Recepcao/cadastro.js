@@ -1,3 +1,21 @@
+function lerFoto(formulario) {
+    const campoFoto = formulario.querySelector('[name="foto"]');
+    const arquivo = campoFoto?.files?.[0];
+
+    if (!arquivo) {
+        return Promise.resolve(null);
+    }
+
+    return new Promise(resolve => {
+        const leitor = new FileReader();
+
+        leitor.onload = () => resolve(leitor.result);
+        leitor.onerror = () => resolve(null);
+
+        leitor.readAsDataURL(arquivo);
+    });
+}
+
 async function cadastrarMedico(event) {
     event.preventDefault();
 
@@ -8,14 +26,15 @@ async function cadastrarMedico(event) {
         botao.disabled = true;
         botao.textContent = "Cadastrando...";
 
+        const dados = dadosDoFormulario(formulario);
+        dados.foto = await lerFoto(formulario);
+
         await requisicao("/api/recepcao/medicos", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(
-                dadosDoFormulario(formulario)
-            )
+            body: JSON.stringify(dados)
         });
 
         formulario.reset();
@@ -52,14 +71,15 @@ async function cadastrarPaciente(event) {
         botao.disabled = true;
         botao.textContent = "Cadastrando...";
 
+        const dados = dadosDoFormulario(formulario);
+        dados.foto = await lerFoto(formulario);
+
         await requisicao("/api/recepcao/pacientes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(
-                dadosDoFormulario(formulario)
-            )
+            body: JSON.stringify(dados)
         });
 
         formulario.reset();
