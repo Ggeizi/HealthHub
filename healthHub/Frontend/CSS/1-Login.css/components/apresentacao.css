@@ -57,7 +57,7 @@
 }
 
 .apresentacao__imagem {
-  width: 170px;
-  max-width: 30%;
+  width: 650px;
+  max-width: none;
   height: auto;
 }
