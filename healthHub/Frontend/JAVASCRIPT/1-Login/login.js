@@ -1,4 +1,3 @@
-
 const API = "";
 
 function mostrarMensagem(texto, tipo = "erro") {
@@ -121,8 +120,8 @@ async function realizarLogin(event) {
 
       throw new Error(
         resultado.erro ||
-        resultado.message ||
-        `Erro no servidor (${resposta.status}).`
+          resultado.message ||
+          `Erro no servidor (${resposta.status}).`,
       );
     }
 
@@ -136,15 +135,13 @@ async function realizarLogin(event) {
     mostrarMensagem("Login realizado com sucesso.", "sucesso");
 
     window.location.href = pagina;
-
   } catch (erro) {
     mostrarMensagem(
       erro instanceof TypeError
         ? "Falha de conexão com o backend. Verifique o servidor e o CORS."
         : erro.message,
-      "erro"
+      "erro",
     );
-
   } finally {
     botao.disabled = false;
     botao.textContent = "Entrar";
