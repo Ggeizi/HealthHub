@@ -1,4 +1,3 @@
-
 package com.healthhub.repository;
 
 // Importa uma interface que armazena e manipula uma lista de elementos
@@ -65,8 +64,11 @@ public class UsuarioRepository {
     public void cadastrarMedico(long hospital, Medico medico, String hash) {
         banco.sql("""
             INSERT INTO usuarios
-                (id_hospital, perfil, nome, login, senha_hash, crm, especialidade)
-            VALUES (:hospital, 'MEDICO', :nome, :login, :senha, :crm, :especialidade)
+                (id_hospital, perfil, nome, login, senha_hash,
+                 crm, especialidade, foto)
+            VALUES
+                (:hospital, 'MEDICO', :nome, :login, :senha,
+                 :crm, :especialidade, :foto)
             """)
             .param("hospital", hospital)
             .param("nome", medico.getNome())
@@ -74,6 +76,7 @@ public class UsuarioRepository {
             .param("senha", hash)
             .param("crm", medico.getCrm())
             .param("especialidade", medico.getEspecialidade())
+            .param("foto", medico.getFoto())
             .update();
     }
 
@@ -81,8 +84,11 @@ public class UsuarioRepository {
     public void cadastrarPaciente(long hospital, Paciente paciente, String hash) {
         banco.sql("""
             INSERT INTO usuarios
-                (id_hospital, perfil, nome, login, senha_hash, cpf, nascimento, telefone)
-            VALUES (:hospital, 'PACIENTE', :nome, :login, :senha, :cpf, :nascimento, :telefone)
+                (id_hospital, perfil, nome, login, senha_hash,
+                 cpf, nascimento, telefone, foto)
+            VALUES
+                (:hospital, 'PACIENTE', :nome, :login, :senha,
+                 :cpf, :nascimento, :telefone, :foto)
             """)
             .param("hospital", hospital)
             .param("nome", paciente.getNome())
@@ -91,6 +97,7 @@ public class UsuarioRepository {
             .param("cpf", paciente.getCpf())
             .param("nascimento", paciente.getNascimento())
             .param("telefone", paciente.getTelefone())
+            .param("foto", paciente.getFoto())
             .update();
     }
 

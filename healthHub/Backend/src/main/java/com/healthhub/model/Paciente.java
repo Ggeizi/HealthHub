@@ -10,6 +10,7 @@ public class Paciente {
     private String cpf;
     private LocalDate nascimento;
     private String telefone;
+    private String foto;
 
     public Paciente() {}
 
@@ -60,4 +61,13 @@ public class Paciente {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+    
 }

@@ -8,6 +8,7 @@ import java.util.Map;
 import com.healthhub.model.Medico;
 import com.healthhub.model.Paciente;
 import com.healthhub.repository.UsuarioRepository;
+import com.healthhub.util.Imagem;
 import com.healthhub.util.Validacao;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -41,6 +42,7 @@ public class RecepcaoService {
             medico.getCrm(), "CRM", 1, 40).toUpperCase(Locale.ROOT));
         medico.setEspecialidade(Validacao.texto(
             medico.getEspecialidade(), "especialidade", 1, 120));
+        medico.setFoto(Imagem.validar(medico.getFoto()));
 
         String hash = encoder.encode(Validacao.senha(medico.getSenha()));
 
@@ -62,6 +64,7 @@ public class RecepcaoService {
         paciente.setCpf(Validacao.documento(paciente.getCpf(), "CPF", 11));
         paciente.setTelefone(Validacao.texto(
             paciente.getTelefone(), "telefone", 1, 30));
+        paciente.setFoto(Imagem.validar(paciente.getFoto()));
 
         String hash = encoder.encode(Validacao.senha(paciente.getSenha()));
 

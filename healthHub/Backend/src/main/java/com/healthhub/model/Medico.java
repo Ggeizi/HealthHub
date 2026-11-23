@@ -7,6 +7,7 @@ public class Medico {
     private String senha;
     private String crm;
     private String especialidade;
+    private String foto;
 
     public Medico() {}
 
@@ -48,5 +49,13 @@ public class Medico {
 
     public void setEspecialidade(String especialidade) {
         this.especialidade = especialidade;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 }
