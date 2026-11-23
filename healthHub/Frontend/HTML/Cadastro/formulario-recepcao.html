@@ -1,28 +1,72 @@
 <form class="hospital__formulario" id="formulario-recepcao">
+
   <h2 class="hospital__titulo">Cadastrar recepcionista</h2>
-  <p class="hospital__descricao">Selecione o hospital e preencha os dados de acesso.</p>
+
+  <p class="hospital__descricao">
+    Selecione o hospital e preencha os dados de acesso.
+  </p>
+
   <div class="hospital__campo">
     <label class="hospital__label" for="hospitalId">Hospital</label>
     <select class="hospital__input" id="hospitalId" name="hospitalId" required>
       <option value="">Carregando hospitais...</option>
     </select>
   </div>
+
   <div class="hospital__campo">
     <label class="hospital__label" for="nomeRecepcao">Nome</label>
-    <input class="hospital__input" id="nomeRecepcao" name="nome" minlength="3" maxlength="160" required>
+    <input
+      class="hospital__input"
+      id="nomeRecepcao"
+      name="nome"
+      minlength="3"
+      maxlength="160"
+      required
+    >
   </div>
+
   <div class="hospital__campo">
     <label class="hospital__label" for="loginRecepcao">E-mail</label>
-    <input class="hospital__input" id="loginRecepcao" name="login" type="email" maxlength="254" required>
+    <input
+      class="hospital__input"
+      id="loginRecepcao"
+      name="login"
+      type="email"
+      maxlength="254"
+      required
+    >
   </div>
+
   <div class="hospital__campo">
     <label class="hospital__label" for="senhaRecepcao">Senha inicial</label>
-    <input class="hospital__input" id="senhaRecepcao" name="senha" type="password" minlength="8" required>
+    <input
+      class="hospital__input"
+      id="senhaRecepcao"
+      name="senha"
+      type="password"
+      minlength="8"
+      required
+    >
   </div>
+
   <div class="hospital__campo">
     <label class="hospital__label" for="fotoRecepcao">Foto</label>
-    <input id="fotoRecepcao" name="foto" type="file" accept="image/png,image/jpeg,image/webp">
+    <input
+      id="fotoRecepcao"
+      name="foto"
+      type="file"
+      accept="image/png,image/jpeg,image/webp"
+    >
   </div>
-  <button class="hospital__botao" type="submit">Cadastrar recepcionista</button>
-  <p id="mensagem-cadastro" class="hospital__mensagem" role="alert"></p>
+
+  <button class="hospital__botao" type="submit">
+    Cadastrar recepcionista
+  </button>
+
+  <p
+    id="mensagem-cadastro"
+    class="hospital__mensagem"
+    role="alert"
+  ></p>
+
 </form>

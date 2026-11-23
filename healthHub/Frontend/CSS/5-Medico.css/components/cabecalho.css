@@ -47,19 +47,13 @@
     background-color: #d4ebeb;
 }
 
-@media (max-width: 600px) {
-    .medico__cabecalho {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 16px;
-    }
 
-    .medico__usuario {
-        width: 100%;
-        justify-content: space-between;
-    }
 
-    .medico__usuario div {
-        align-items: flex-start;
-    }
+/* Foto de perfil do usuário */
+#foto {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
 }
